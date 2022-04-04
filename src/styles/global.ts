@@ -43,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       font-family: ${theme.font.family};
-      font-size: ${theme.font.size.medium};
+      font-size: ${theme.font.sizes.medium};
     }
   `}
 `;
