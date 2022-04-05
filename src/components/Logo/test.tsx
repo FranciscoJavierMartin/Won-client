@@ -47,4 +47,15 @@ describe('<Logo />', () => {
       height: '5.9rem',
     });
   });
+
+  it('should render a bigger logo without text if hideOnMobile', () => {
+    renderWithTheme(<Logo hideOnMobile />);
+    expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyleRule(
+      'width',
+      '5.8rem',
+      {
+        media: '(max-width: 768px)',
+      }
+    );
+  });
 });
