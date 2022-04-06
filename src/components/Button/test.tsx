@@ -41,4 +41,20 @@ describe('<Button />', () => {
       'font-size': '1.6rem',
     });
   });
+
+  it('should not render a fullWidth version when property is not passed', () => {
+    renderWithTheme(<Button>Buy now</Button>);
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).not.toHaveStyle({
+      width: '100%',
+    });
+  });
+
+  it('should render a fullWidth version', () => {
+    renderWithTheme(<Button fullWidth>Buy now</Button>);
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      width: '100%',
+    });
+  });
 });
