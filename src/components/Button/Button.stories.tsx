@@ -1,5 +1,6 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import Button from '.';
+import { AddShoppingCart } from '@styled-icons/material-outlined';
+import Button, { ButtonProps } from '.';
 
 export default {
   title: 'Button',
@@ -9,11 +10,22 @@ export default {
     children: {
       type: 'string',
     },
+    icon: {
+      type: 'string',
+    },
   },
 } as ComponentMeta<typeof Button>;
 
-export const Basic: Story = (args) => <Button {...args} />;
+export const Default: Story<ButtonProps> = (args) => <Button {...args} />;
 
-Basic.args = {
+Default.args = {
   children: 'Buy now',
+};
+
+export const WithIcon: Story<ButtonProps> = (args) => <Button {...args} />;
+
+WithIcon.args = {
+  size: 'small',
+  children: 'Buy now',
+  icon: <AddShoppingCart />,
 };

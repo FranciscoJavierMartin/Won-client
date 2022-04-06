@@ -7,6 +7,6 @@ export default {
   args: {},
 } as ComponentMeta<typeof {{pascalCase name}}>;
 
-export const Basic: Story = (args) => <{{pascalCase name}} {...args} />;
+export const Default: Story<{{pascalCase name}}Props> = (args) => <{{pascalCase name}} {...args} />;
 
-Basic.args = {};
+Default.args = {};

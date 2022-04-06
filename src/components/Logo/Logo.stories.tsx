@@ -1,5 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import Logo from '.';
+import Logo, { LogoProps } from '.';
 
 export default {
   title: 'Logo',
@@ -7,6 +7,6 @@ export default {
   args: {},
 } as ComponentMeta<typeof Logo>;
 
-export const Basic: Story = (args) => <Logo {...args} />;
+export const Default: Story<LogoProps> = (args) => <Logo {...args} />;
 
-Basic.args = {};
+Default.args = {};
