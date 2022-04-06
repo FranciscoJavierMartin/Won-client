@@ -7,6 +7,7 @@ import {
 } from '@styled-icons/material-outlined';
 import Logo from '../Logo';
 import * as S from './styles';
+import Button from '../Button';
 
 export type MenuProps = {
   username?: string;
@@ -35,6 +36,20 @@ const Menu: React.FC<MenuProps> = () => {
           aria-label="Close Menu"
           onClick={() => setIsOpen((prevState) => !prevState)}
         />
+        <S.MenuNav>
+          <S.MenuLink href="#">Home</S.MenuLink>
+          <S.MenuLink href="#">Explore</S.MenuLink>
+        </S.MenuNav>
+
+        <S.RegisterBox>
+          <Button fullWidth size="large">
+            Sign In
+          </Button>
+          <span>or</span>
+          <S.CreateAccount href="#" title="Sign Up">
+            Sign Up
+          </S.CreateAccount>
+        </S.RegisterBox>
       </S.MenuFull>
     </S.Wrapper>
   );
