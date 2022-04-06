@@ -15,7 +15,7 @@ export const Mobile: Story<MediaMatchProps> = () => (
   <MediaMatch lessThan="medium">Only on Mobile</MediaMatch>
 );
 
-Desktop.parameters = {
+Mobile.parameters = {
   viewport: {
     defaultViewport: 'mobile1',
   },
