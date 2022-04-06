@@ -1,11 +1,44 @@
-import {render, screen} from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { renderWithTheme } from '../../utils/tests/helpers';
 import Button from '.';
 
 describe('<Button />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Button />);
+  it('should render medium size by default', () => {
+    renderWithTheme(<Button>Buy now</Button>);
 
-    expect(screen.getByRole('heading', { name: /Button/i })).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot();
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      height: '4rem',
+      padding: '0.8rem 3.2rem',
+      'font-size': '1.4rem',
+    });
+  });
+
+  it('should render small size', () => {
+    renderWithTheme(<Button size="small">Buy now</Button>);
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      height: '3rem',
+      'font-size': '1.2rem',
+    });
+  });
+
+  it('should render medium size', () => {
+    renderWithTheme(<Button size="medium">Buy now</Button>);
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      height: '4rem',
+      padding: '0.8rem 3.2rem',
+      'font-size': '1.4rem',
+    });
+  });
+
+  it('should render large size', () => {
+    renderWithTheme(<Button size="large">Buy now</Button>);
+
+    expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
+      height: '5rem',
+      padding: '0.8rem 4.0rem',
+      'font-size': '1.6rem',
+    });
   });
 });

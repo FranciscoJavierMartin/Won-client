@@ -5,7 +5,7 @@ export type ButtonProps = {
   size?: 'small' | 'medium' | 'large';
 };
 
-const Button: React.FC<ButtonProps> = ({ children, size }) => (
+const Button: React.FC<ButtonProps> = ({ children, size = 'medium' }) => (
   <S.Wrapper size={size}>{children && <span>{children}</span>}</S.Wrapper>
 );
 
