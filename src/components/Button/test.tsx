@@ -74,6 +74,6 @@ describe('<Button />', () => {
     renderWithTheme(<Button>Buy now</Button>);
 
     expect(screen.getByText(/Buy now/i)).toBeInTheDocument();
-    expect(screen.queryByTestId('icon')).toBeNull();
+    expect(screen.queryByTestId('icon')).not.toBeInTheDocument();
   });
 });

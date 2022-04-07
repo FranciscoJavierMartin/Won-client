@@ -31,4 +31,19 @@ describe('<Menu />', () => {
       opacity: 0,
     });
   });
+
+  it('should shown register box when user is logged out', () => {
+    renderWithTheme(<Menu />);
+    expect(screen.getByText(/Sign Up/i)).toBeInTheDocument();
+    expect(screen.queryByText(/My Account/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Wishlist/i)).not.toBeInTheDocument();
+  });
+
+  it('should shown wishlist and account when user is logged in', () => {
+    renderWithTheme(<Menu username="John" />);
+    expect(screen.getByText(/My Account/i)).toBeInTheDocument();
+    expect(screen.getByText(/Wishlist/i)).toBeInTheDocument();
+    expect(screen.queryByTestId(/Sign In/i)).not.toBeInTheDocument();
+    expect(screen.queryByTestId(/Sign Up/i)).not.toBeInTheDocument();
+  });
 });
