@@ -5,10 +5,10 @@ import {
   Search as SearchIcon,
   Close as CloseIcon,
 } from '@styled-icons/material-outlined';
-import Logo from '../Logo';
+import Logo from '@/components/Logo';
+import Button from '@/components/Button';
+import MediaMatch from '@/components/MediaMatch';
 import * as S from './styles';
-import Button from '../Button';
-import MediaMatch from '../MediaMatch';
 
 export type MenuProps = {
   username?: string;
