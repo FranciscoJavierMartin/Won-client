@@ -2,6 +2,8 @@
 
 exports[`<Ribbon /> should render text correctly 1`] = `
 .c0 {
+  font-size: 1.4rem;
+  height: 3.6rem;
   background-color: #F231A5;
 }
 

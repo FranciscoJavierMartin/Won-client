@@ -1,14 +1,22 @@
 import * as S from './styles';
 
 export type RibbonColors = 'primary' | 'secondary';
+export type RibbonSizes = 'normal' | 'small';
 
 export type RibbonProps = {
   children: React.ReactNode;
   color?: RibbonColors;
+  size?: RibbonSizes;
 };
 
-const Ribbon: React.FC<RibbonProps> = ({ children, color = 'primary' }) => (
-  <S.Wrapper color={color}>{children}</S.Wrapper>
+const Ribbon: React.FC<RibbonProps> = ({
+  children,
+  color = 'primary',
+  size = 'normal',
+}) => (
+  <S.Wrapper color={color} size={size}>
+    {children}
+  </S.Wrapper>
 );
 
 export default Ribbon;
