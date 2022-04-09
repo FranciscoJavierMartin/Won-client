@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../src/components/**/*.stories.tsx'],
   addons: [
@@ -7,6 +9,10 @@ module.exports = {
   ],
   webpackFinal: (config) => {
     config.resolve.modules.push(`${process.cwd()}/src`);
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../src/'),
+    };
     return config;
   },
   framework: '@storybook/react',
