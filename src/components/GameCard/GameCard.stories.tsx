@@ -9,6 +9,12 @@ export default {
     developer: 'Rockstar Games',
     img: 'https://source.unsplash.com/user/willianjusten/300x140',
     price: '99,99 €',
+    promotionalPrice: '79.99 €',
+  },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
   },
 } as ComponentMeta<typeof GameCard>;
 
