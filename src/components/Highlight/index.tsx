@@ -7,6 +7,8 @@ export type HighlightProps = {
   buttonLabel: string;
   buttonLink: string;
   backgroundImage: string;
+  floatImage?: string;
+  alignment?: 'right' | 'left';
 };
 
 const Highlight: React.FC<HighlightProps> = ({
@@ -15,8 +17,11 @@ const Highlight: React.FC<HighlightProps> = ({
   buttonLabel,
   buttonLink,
   backgroundImage,
+  floatImage,
+  alignment = 'right',
 }) => (
-  <S.Wrapper backgroundImage={backgroundImage}>
+  <S.Wrapper alignment={alignment} backgroundImage={backgroundImage}>
+    {!!floatImage && <S.FloatImage src={floatImage} alt={title} />}
     <S.Content>
       <S.Title>{title}</S.Title>
       <S.Subtitle>{subtitle}</S.Subtitle>
