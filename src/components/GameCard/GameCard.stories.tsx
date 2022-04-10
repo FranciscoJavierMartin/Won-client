@@ -11,6 +11,11 @@ export default {
     price: '99,99 €',
     promotionalPrice: '79.99 €',
   },
+  argTypes: {
+    onFav: {
+      action: 'clicked',
+    },
+  },
   parameters: {
     backgrounds: {
       default: 'dark',
