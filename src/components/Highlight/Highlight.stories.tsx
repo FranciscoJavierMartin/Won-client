@@ -9,6 +9,7 @@ export default {
     subtitle: "Come see John's new adventures",
     buttonLabel: 'Buy Now',
     buttonLink: '/rd2',
+    backgroundImage: 'https://source.unsplash.com/user/willianjusten/1042x580',
   },
 } as ComponentMeta<typeof Highlight>;
 
