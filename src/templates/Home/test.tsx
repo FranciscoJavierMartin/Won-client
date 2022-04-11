@@ -7,13 +7,13 @@ import Home from '.';
 
 const props = {
   banners: bannersMock,
-  newGames: gamesMock,
+  newGames: [gamesMock[0]],
   mostPopularHighlight: highlightMock,
-  mostPopularGames: gamesMock,
-  upcommingGames: gamesMock,
+  mostPopularGames: [gamesMock[0]],
+  upcommingGames: [gamesMock[0]],
   upcommingHighligth: highlightMock,
-  upcommingMoreGames: gamesMock,
-  freeGames: gamesMock,
+  upcommingMoreGames: [gamesMock[0]],
+  freeGames: [gamesMock[0]],
   freeHighligth: highlightMock,
 };
 
@@ -24,13 +24,20 @@ describe('<Home />', () => {
     expect(
       screen.getByRole('heading', { name: /follow us/i })
     ).toBeInTheDocument();
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it('should render sections', () => {
-    renderWithTheme(<Home {...props} />);
+    expect(screen.getAllByRole('img', { name: /won games/i })).toHaveLength(2);
+    expect(screen.getByRole('heading', { name: /news/i })).toBeInTheDocument();
+    +expect(
+      screen.getByRole('heading', { name: /most popular/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /upcomming/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /free games/i })
+    ).toBeInTheDocument();
     expect(screen.getAllByText(/Defy death 1/i)).toHaveLength(1);
-    expect(screen.getAllByText(/population zero/i)).toHaveLength(20);
+    expect(screen.getAllByText(/population zero/i)).toHaveLength(5);
     expect(screen.getAllByText(/Read dead is back/i)).toHaveLength(3);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

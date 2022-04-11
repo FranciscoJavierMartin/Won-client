@@ -16,6 +16,7 @@ const Logo: React.FC<LogoProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 158 48"
+      role="img"
       aria-label="Won Games"
     >
       <path
