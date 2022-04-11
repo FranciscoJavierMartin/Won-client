@@ -14,6 +14,6 @@ Default.args = {};
 Default.parameters = {
   layout: 'fullscreen',
   backgrounds: {
-    default: 'dark',
+    default: 'won-dark',
   },
 };
