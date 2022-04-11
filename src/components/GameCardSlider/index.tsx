@@ -4,12 +4,8 @@ import Slider, { SliderSettings } from '@/components/Slider';
 import GameCard, { GameCardProps } from '@/components/GameCard';
 import * as S from './styles';
 
-export type GameCardSliderProps = {
-  items: GameCardProps[];
-  color?: 'white' | 'black';
-};
-
 const settings: SliderSettings = {
+  arrows: true,
   slidesToShow: 4,
   infinite: false,
   lazyLoad: 'ondemand',
@@ -47,9 +43,14 @@ const settings: SliderSettings = {
   prevArrow: <ArrowLeft aria-label="previous games" />,
 };
 
+export type GameCardSliderProps = {
+  items: GameCardProps[];
+  color?: 'white' | 'black';
+};
+
 const GameCardSlider: React.FC<GameCardSliderProps> = ({
   items,
-  color = 'black',
+  color = 'white',
 }) => (
   <S.Wrapper color={color}>
     <Slider settings={settings}>
