@@ -14,4 +14,29 @@ describe('<Checkbox />', () => {
     renderWithTheme(<Checkbox />);
     expect(screen.queryByLabelText('Checkbox')).not.toBeInTheDocument();
   });
+
+  it('should render with white label by default', () => {
+    renderWithTheme(<Checkbox label="Checkbox label" labelFor="check" />);
+    expect(screen.getByText(/Checkbox label/i)).toHaveStyle({
+      color: '#FAFAFA',
+    });
+  });
+
+  it('should render with white label when is passed explicitly', () => {
+    renderWithTheme(
+      <Checkbox label="Checkbox label" labelFor="check" labelColor="white" />
+    );
+    expect(screen.getByText(/Checkbox label/i)).toHaveStyle({
+      color: '#FAFAFA',
+    });
+  });
+
+  it('should render with black label', () => {
+    renderWithTheme(
+      <Checkbox label="Checkbox label" labelFor="check" labelColor="black" />
+    );
+    expect(screen.getByText(/Checkbox label/i)).toHaveStyle({
+      color: '#030517',
+    });
+  });
 });
