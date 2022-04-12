@@ -9,6 +9,7 @@ export type TextFieldProps = {
   icon?: React.ReactNode;
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
+  error?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -19,6 +20,7 @@ const TextField: React.FC<TextFieldProps> = ({
   initialValue = '',
   onInput,
   disabled = false,
+  error,
   ...props
 }) => {
   const [value, setValue] = useState<string | undefined>(initialValue);
@@ -31,7 +33,7 @@ const TextField: React.FC<TextFieldProps> = ({
     setValue(e.currentTarget.value);
   };
   return (
-    <S.Wrapper disabled={disabled}>
+    <S.Wrapper disabled={disabled} error={!!error}>
       {label && <S.Label htmlFor={labelFor}>{label}</S.Label>}
       <S.InputWrapper>
         {icon && <S.Icon iconPosition={iconPosition}>{icon}</S.Icon>}
@@ -44,6 +46,7 @@ const TextField: React.FC<TextFieldProps> = ({
           {...props}
         />
       </S.InputWrapper>
+      {error && <S.Error>{error}</S.Error>}
     </S.Wrapper>
   );
 };
