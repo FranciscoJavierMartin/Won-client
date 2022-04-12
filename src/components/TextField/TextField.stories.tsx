@@ -1,4 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
+import { Email } from '@styled-icons/material-outlined';
 import TextField, { TextFieldProps } from '.';
 
 export default {
@@ -10,9 +11,11 @@ export default {
     id: 'Email',
     initialValue: '',
     placeholder: 'john@doe.com',
+    icon: <Email />,
   },
   argTypes: {
     onInput: { action: 'changed' },
+    // icon: { type: '' },
   },
 } as ComponentMeta<typeof TextField>;
 
