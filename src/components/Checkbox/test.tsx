@@ -41,7 +41,7 @@ describe('<Checkbox />', () => {
     });
   });
 
-  it('should dispatch onCheck when status change', async () => {
+  it('should dispatch onCheck when status changes (initial not checked)', async () => {
     const onCheck = jest.fn();
     renderWithTheme(<Checkbox label="Checkbox" onCheck={onCheck} />);
 
@@ -51,5 +51,18 @@ describe('<Checkbox />', () => {
     await waitFor(() => {
       expect(onCheck).toHaveBeenCalledTimes(1);
     });
+    expect(onCheck).toHaveBeenCalledWith(true);
+  });
+
+  it('should dispatch onCheck when status change (initial checked)', async () => {
+    const onCheck = jest.fn();
+    renderWithTheme(<Checkbox label="Checkbox" onCheck={onCheck} isChecked />);
+
+    userEvent.click(screen.getByRole('checkbox'));
+
+    await waitFor(() => {
+      expect(onCheck).toHaveBeenCalledTimes(1);
+    });
+    expect(onCheck).toHaveBeenCalledWith(false);
   });
 });

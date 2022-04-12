@@ -12,6 +12,8 @@ export default {
   },
 } as ComponentMeta<typeof Checkbox>;
 
-export const Default: Story<CheckboxProps> = (args) => <Checkbox {...args} />;
+export const Default: Story<CheckboxProps> = (args) => (
+  <Checkbox isChecked {...args} />
+);
 
 Default.args = {};

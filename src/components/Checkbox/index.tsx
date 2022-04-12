@@ -3,18 +3,23 @@ import * as S from './styles';
 
 export type CheckboxProps = {
   onCheck?: (status: boolean) => void;
+  isChecked?: boolean;
   label?: string;
   labelFor?: string;
   labelColor?: 'white' | 'black';
+  value?: string | ReadonlyArray<string> | number;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 const Checkbox: React.FC<CheckboxProps> = ({
+  isChecked = false,
   onCheck,
   label,
   labelFor = '',
   labelColor = 'white',
+  value,
+  ...props
 }) => {
-  const [checked, setChecked] = useState<boolean>(false);
+  const [checked, setChecked] = useState<boolean>(isChecked);
 
   const onChange: ChangeEventHandler<HTMLInputElement> = () => {
     if (onCheck) {
@@ -30,6 +35,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
         type="checkbox"
         onChange={onChange}
         checked={checked}
+        value={value}
+        {...props}
       />
       {!!label && (
         <S.Label labelColor={labelColor} htmlFor={labelFor}>
