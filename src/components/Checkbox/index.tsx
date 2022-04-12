@@ -1,13 +1,14 @@
 import * as S from './styles';
 
 export type CheckboxProps = {
-  label: string;
+  label?: string;
+  labelFor?: string;
 };
 
-const Checkbox: React.FC<CheckboxProps> = ({ label }) => (
+const Checkbox: React.FC<CheckboxProps> = ({ label, labelFor = '' }) => (
   <S.Wrapper>
-    <input id="action" type="checkbox" />
-    <label htmlFor="action">{label}</label>
+    <input id={labelFor} type="checkbox" />
+    {!!label && <label htmlFor={labelFor}>{label}</label>}
   </S.Wrapper>
 );
 
