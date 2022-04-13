@@ -1390,13 +1390,14 @@ exports[`<Home /> should render menu and footer 1`] = `
         <div
           class="c7"
         >
-          <button
+          <a
             class="c13"
+            href="/sign-in"
           >
             <span>
               Sign In
             </span>
-          </button>
+          </a>
         </div>
       </div>
       <nav
@@ -1439,19 +1440,20 @@ exports[`<Home /> should render menu and footer 1`] = `
         <div
           class="c15 c16"
         >
-          <button
+          <a
             class="c17"
+            href="/sign-in"
           >
             <span>
               Sign In
             </span>
-          </button>
+          </a>
           <span>
             or
           </span>
           <a
             class="c18"
-            href="#"
+            href="/sign-up"
             title="Sign Up"
           >
             Sign Up

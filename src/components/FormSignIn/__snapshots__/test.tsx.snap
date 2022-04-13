@@ -225,7 +225,7 @@ exports[`<FormSignIn /> should render the form 1`] = `
           Don't have and account?
            
           <a
-            href="/sign-p"
+            href="/sign-up"
           >
             Sign Up
           </a>

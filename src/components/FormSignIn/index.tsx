@@ -30,7 +30,7 @@ const FormSignIn: React.FC<FormSignInProps> = () => (
       </Button>
       <FormLink>
         Don&apos;t have and account?{' '}
-        <Link href="/sign-p">
+        <Link href="/sign-up">
           <a>Sign Up</a>
         </Link>
       </FormLink>
