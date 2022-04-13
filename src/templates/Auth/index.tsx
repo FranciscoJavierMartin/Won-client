@@ -11,7 +11,7 @@ const Auth: React.FC<AuthProps> = ({ title, children }) => (
   <S.Wrapper>
     <S.BannerBlock>
       <S.BannerContent>
-        <Logo />
+        <Logo id="banner" />
         <div>
           <Heading>All your favorite games in one place</Heading>
           <S.Subtitle>
@@ -23,7 +23,7 @@ const Auth: React.FC<AuthProps> = ({ title, children }) => (
     </S.BannerBlock>
     <S.Content>
       <S.ContentWrapper>
-        <Logo color="black" size="large" />
+        <Logo color="black" size="large" id="content" />
         <Heading color="black" lineColor="secondary" lineLeft>
           {title}
         </Heading>
