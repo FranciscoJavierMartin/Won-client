@@ -392,27 +392,20 @@ exports[`<Home /> should render menu and footer 1`] = `
 }
 
 .c36 {
-  color: #030517;
-  padding-left: 0.8rem;
-  border-left: 0.7rem solid #3CD3C1;
-  font-size: 2.0rem;
-}
-
-.c50 {
   color: #FAFAFA;
   padding-left: 0.8rem;
   border-left: 0.7rem solid #3CD3C1;
   font-size: 2.0rem;
 }
 
-.c64 {
+.c62 {
   color: #030517;
   position: relative;
   margin-bottom: 3.2rem;
   font-size: 1.6rem;
 }
 
-.c64::after {
+.c62::after {
   content: '';
   position: absolute;
   left: 0;
@@ -421,7 +414,7 @@ exports[`<Home /> should render menu and footer 1`] = `
   border-bottom: 0.5rem solid #3CD3C1;
 }
 
-.c64::after {
+.c62::after {
   width: 3rem;
 }
 
@@ -431,25 +424,25 @@ exports[`<Home /> should render menu and footer 1`] = `
   height: 3.3rem;
 }
 
-.c61 {
+.c59 {
   color: #030517;
   width: 11rem;
   height: 3.3rem;
 }
 
-.c60 .c35 {
+.c58 .c35 {
   text-transform: uppercase;
 }
 
-.c62 {
+.c60 {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 3.2rem;
   margin-top: 3.2rem;
 }
 
-.c63 a,
-.c63 span {
+.c61 a,
+.c61 span {
   display: block;
   color: #8F8F8F;
   -webkit-text-decoration: none;
@@ -458,12 +451,12 @@ exports[`<Home /> should render menu and footer 1`] = `
   font-size: 1.4rem;
 }
 
-.c63 a:hover {
+.c61 a:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c65 {
+.c63 {
   color: #8F8F8F;
   font-size: 1.2rem;
   margin-top: 4.0rem;
@@ -475,271 +468,6 @@ exports[`<Home /> should render menu and footer 1`] = `
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
-}
-
-.c39 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background-color: #FAFAFA;
-}
-
-.c40 {
-  height: 14rem;
-  width: 100%;
-  background: #f6f7f8;
-  background-image: linear-gradient( to-right,#f6f7f8 0%,#edeef1 20%,#f6f7f8 40%,#f6f7f8 100% );
-  background-size: 80rem 14rem;
-  -webkit-animation: placeholderShimmer 1s linear infinite forwards;
-  animation: placeholderShimmer 1s linear infinite forwards;
-}
-
-.c40 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.c41 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  position: relative;
-  height: 100%;
-  margin: 1.6rem;
-}
-
-.c42 {
-  max-width: calc(100% - 2.5rem);
-}
-
-.c43 {
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  font-weight: 600;
-  color: #030517;
-}
-
-.c44 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #8F8F8F;
-}
-
-.c45 {
-  color: #F231A5;
-  position: absolute;
-  right: 0;
-  top: -0.5rem;
-  cursor: pointer;
-}
-
-.c45 svg {
-  width: 2.5rem;
-}
-
-.c46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-top: 0.8rem;
-}
-
-.c47 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  height: 3rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #8F8F8F;
-  -webkit-text-decoration: line-through;
-  text-decoration: line-through;
-  margin-right: 0.8rem;
-}
-
-.c48 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-weight: 600;
-  height: 3rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #FAFAFA;
-  padding: 0 0.8rem;
-  background-color: #3CD3C1;
-  border-radius: 0.4rem;
-  margin-right: calc(0.8rem / 2);
-}
-
-.c38 .slick-track,
-.c38 .slick-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c38 .slick-slide > div {
-  margin: 0 0.8rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  height: 100%;
-}
-
-.c38 .slick-list {
-  margin: 0 -0.8rem;
-}
-
-.c38 .slick-prev,
-.c38 .slick-next {
-  display: block;
-  color: #030517;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  -webkit-transform: translate(0,-50%);
-  -ms-transform: translate(0,-50%);
-  transform: translate(0,-50%);
-}
-
-.c38 .slick-prev {
-  left: -5.6rem;
-}
-
-.c38 .slick-next {
-  right: -5.6rem;
-}
-
-.c38 .slick-prev.slick-disabled,
-.c38 .slick-next.slick-disabled {
-  visibility: hidden;
-}
-
-.c57 .slick-track,
-.c57 .slick-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c57 .slick-slide > div {
-  margin: 0 0.8rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  height: 100%;
-}
-
-.c57 .slick-list {
-  margin: 0 -0.8rem;
-}
-
-.c57 .slick-prev,
-.c57 .slick-next {
-  display: block;
-  color: #FAFAFA;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  -webkit-transform: translate(0,-50%);
-  -ms-transform: translate(0,-50%);
-  transform: translate(0,-50%);
-}
-
-.c57 .slick-prev {
-  left: -5.6rem;
-}
-
-.c57 .slick-next {
-  right: -5.6rem;
-}
-
-.c57 .slick-prev.slick-disabled,
-.c57 .slick-next.slick-disabled {
-  visibility: hidden;
-}
-
-.c52 {
-  position: relative;
-  background-image: url(/img/red-dead-img.jpeg);
-  background-position: center center;
-  background-size: cover;
-  height: 23rem;
-  display: grid;
-  grid-template-areas: 'floatimage content';
-  grid-template-columns: 1.3fr 2fr;
-}
-
-.c52::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.c52 .c53 {
-  text-align: right;
-}
-
-.c54 {
-  grid-area: content;
-  z-index: 10;
-  padding: 1.6rem;
-}
-
-.c55 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #FAFAFA;
-}
-
-.c56 {
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: #FAFAFA;
-  margin-bottom: 1.6rem;
 }
 
 .c2 {
@@ -921,13 +649,230 @@ exports[`<Home /> should render menu and footer 1`] = `
   border-bottom: 0.2rem solid #F231A5;
 }
 
-.c33 {
+.c39 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+}
+
+.c40 {
+  height: 14rem;
+  width: 100%;
+  background: #f6f7f8;
+  background-image: linear-gradient( to-right,#f6f7f8 0%,#edeef1 20%,#f6f7f8 40%,#f6f7f8 100% );
+  background-size: 80rem 14rem;
+  -webkit-animation: placeholderShimmer 1s linear infinite forwards;
+  animation: placeholderShimmer 1s linear infinite forwards;
+}
+
+.c40 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  margin: 1.6rem;
+}
+
+.c42 {
+  max-width: calc(100% - 2.5rem);
+}
+
+.c43 {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  color: #030517;
+}
+
+.c44 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #8F8F8F;
+}
+
+.c45 {
+  color: #F231A5;
+  position: absolute;
+  right: 0;
+  top: -0.5rem;
+  cursor: pointer;
+}
+
+.c45 svg {
+  width: 2.5rem;
+}
+
+.c46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-top: 0.8rem;
+}
+
+.c47 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #8F8F8F;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+  margin-right: 0.8rem;
+}
+
+.c48 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 600;
+  height: 3rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #FAFAFA;
+  padding: 0 0.8rem;
+  background-color: #3CD3C1;
+  border-radius: 0.4rem;
+  margin-right: calc(0.8rem / 2);
+}
+
+.c38 .slick-track,
+.c38 .slick-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c38 .slick-slide > div {
+  margin: 0 0.8rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.c38 .slick-list {
+  margin: 0 -0.8rem;
+}
+
+.c38 .slick-prev,
+.c38 .slick-next {
+  display: block;
+  color: #FAFAFA;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  -webkit-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+
+.c38 .slick-prev {
+  left: -5.6rem;
+}
+
+.c38 .slick-next {
+  right: -5.6rem;
+}
+
+.c38 .slick-prev.slick-disabled,
+.c38 .slick-next.slick-disabled {
+  visibility: hidden;
+}
+
+.c51 {
+  position: relative;
+  background-image: url(/img/red-dead-img.jpeg);
+  background-position: center center;
+  background-size: cover;
+  height: 23rem;
+  display: grid;
+  grid-template-areas: 'floatimage content';
+  grid-template-columns: 1.3fr 2fr;
+}
+
+.c51::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.c51 .c52 {
+  text-align: right;
+}
+
+.c53 {
+  grid-area: content;
+  z-index: 10;
+  padding: 1.6rem;
+}
+
+.c54 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #FAFAFA;
+}
+
+.c55 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #FAFAFA;
+  margin-bottom: 1.6rem;
+}
+
+.c34 {
   margin-bottom: calc(4.0rem * 2);
 }
 
-.c33 .c35,
-.c33 .c51,
-.c33 .c37 {
+.c34 .c35,
+.c34 .c50,
+.c34 .c37 {
   margin-bottom: 3.2rem;
 }
 
@@ -935,15 +880,15 @@ exports[`<Home /> should render menu and footer 1`] = `
   margin: 4.0rem calc(-3.2rem / 2);
 }
 
-.c34 {
+.c33 {
   margin-bottom: calc(5.6rem * 2);
 }
 
-.c58 .c51 {
+.c56 .c50 {
   margin-top: calc(4.8rem * 2);
 }
 
-.c59 {
+.c57 {
   margin-top: 4.0rem;
   padding-bottom: 1.6rem;
   padding-top: 5.6rem;
@@ -1036,12 +981,6 @@ exports[`<Home /> should render menu and footer 1`] = `
   }
 }
 
-@media (min-width:768px) {
-  .c50 {
-    font-size: 2.8rem;
-  }
-}
-
 @media (max-width:768px) {
   .c6 {
     width: 5.8rem;
@@ -1058,67 +997,8 @@ exports[`<Home /> should render menu and footer 1`] = `
 }
 
 @media (min-width:768px) {
-  .c62 {
+  .c60 {
     grid-template-columns: repeat(4,1fr);
-  }
-}
-
-@media (max-width:1440px) {
-  .c38 {
-    overflow-x: hidden;
-  }
-}
-
-@media (min-width:1170px) {
-  .c38 .slick-slide > div {
-    margin: 0 1.6rem;
-  }
-
-  .c38 .slick-list {
-    margin: 0 -1.6rem;
-  }
-}
-
-@media (max-width:1440px) {
-  .c57 {
-    overflow-x: hidden;
-  }
-}
-
-@media (min-width:1170px) {
-  .c57 .slick-slide > div {
-    margin: 0 1.6rem;
-  }
-
-  .c57 .slick-list {
-    margin: 0 -1.6rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c52 {
-    height: 32rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c54 {
-    -webkit-align-self: end;
-    -ms-flex-item-align: end;
-    align-self: end;
-    padding: 4.0rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c55 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c56 {
-    font-size: 1.8rem;
   }
 }
 
@@ -1150,15 +1030,58 @@ exports[`<Home /> should render menu and footer 1`] = `
   }
 }
 
+@media (max-width:1440px) {
+  .c38 {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width:1170px) {
+  .c38 .slick-slide > div {
+    margin: 0 1.6rem;
+  }
+
+  .c38 .slick-list {
+    margin: 0 -1.6rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c51 {
+    height: 32rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c53 {
+    -webkit-align-self: end;
+    -ms-flex-item-align: end;
+    align-self: end;
+    padding: 4.0rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c54 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c55 {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width:768px) {
-  .c33 .c51 {
+  .c34 .c50 {
     margin-right: calc(-3.2rem / 2);
     margin-right: calc(-3.2rem / 2);
   }
 }
 
 @media (max-width:1440px) {
-  .c33 .c37 {
+  .c34 .c37 {
     margin-right: calc(-3.2rem / 2);
   }
 }
@@ -1172,13 +1095,13 @@ exports[`<Home /> should render menu and footer 1`] = `
 }
 
 @media (min-width:1170px) {
-  .c34 {
+  .c33 {
     margin-top: -13rem;
   }
 }
 
 @media (min-width:768px) {
-  .c34 {
+  .c33 {
     margin-bottom: 0;
     padding-top: 14rem;
     padding-bottom: 10rem;
@@ -1187,13 +1110,13 @@ exports[`<Home /> should render menu and footer 1`] = `
     clip-path: polygon(0 0,100% 15%,100% 100%,0 85%);
   }
 
-  .c34 .c35 {
+  .c33 .c35 {
     color: #030517;
   }
 }
 
 @media (min-width:768px) {
-  .c59 {
+  .c57 {
     padding-top: calc(5.6rem * 2);
     -webkit-clip-path: polygon(0 15%,100% 0%,100% 100%,0 100%);
     clip-path: polygon(0 15%,100% 0%,100% 100%,0 100%);
@@ -1665,604 +1588,20 @@ exports[`<Home /> should render menu and footer 1`] = `
       </section>
     </section>
   </div>
-  <section
-    class="c33 c34"
+  <div
+    class="c33"
   >
-    <div
-      class="c0"
+    <section
+      class="c0 c34"
     >
       <h2
         class="c35 c36"
-        color="black"
+        color="white"
       >
         News
       </h2>
       <section
         class="c37 c38"
-        color="black"
-      >
-        <section
-          class="c21"
-        >
-          <div
-            class="slick-slider slick-initialized"
-          >
-            <div
-              class="slick-list"
-            >
-              <div
-                class="slick-track"
-                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
-              >
-                <div
-                  aria-hidden="false"
-                  class="slick-slide slick-active slick-current"
-                  data-index="0"
-                  style="outline: none; width: 0px;"
-                  tabindex="-1"
-                >
-                  <div>
-                    <article
-                      class="c39"
-                    >
-                      <div
-                        class="c40"
-                      >
-                        <img
-                          alt="Population Zero"
-                          src="https://source.unsplash.com/user/willianjusten/300x140"
-                        />
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <div
-                          class="c42"
-                        >
-                          <h3
-                            class="c43"
-                          >
-                            Population Zero
-                          </h3>
-                          <h4
-                            class="c44"
-                          >
-                            Rockstar Games
-                          </h4>
-                        </div>
-                        <div
-                          class="c45"
-                          role="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            aria-label="Add to wishlist"
-                            class="c4"
-                            fill="currentColor"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0V0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="c46"
-                        >
-                          <div
-                            class="c47"
-                          >
-                            99,99 €
-                          </div>
-                          <div
-                            class="c48"
-                          >
-                            79,99 €
-                          </div>
-                          <button
-                            class="c49"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="c4"
-                              fill="currentColor"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 0h24v24H0V0z"
-                                fill="none"
-                              />
-                              <path
-                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-    </div>
-  </section>
-  <div
-    class="c0"
-  >
-    <section
-      class="c33"
-    >
-      <h2
-        class="c35 c50"
-        color="white"
-      >
-        Most Popular
-      </h2>
-      <section
-        class="c51 c52"
-      >
-        <div
-          class="c53 c54"
-        >
-          <h2
-            class="c55"
-          >
-            Read Dead is back
-          </h2>
-          <h3
-            class="c56"
-          >
-            Come see John's new adventures
-          </h3>
-          <a
-            class="c13"
-            href="/games/rd2"
-          >
-            <span>
-              Buy Now
-            </span>
-          </a>
-        </div>
-      </section>
-      <section
-        class="c37 c57"
-        color="white"
-      >
-        <section
-          class="c21"
-        >
-          <div
-            class="slick-slider slick-initialized"
-          >
-            <div
-              class="slick-list"
-            >
-              <div
-                class="slick-track"
-                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
-              >
-                <div
-                  aria-hidden="false"
-                  class="slick-slide slick-active slick-current"
-                  data-index="0"
-                  style="outline: none; width: 0px;"
-                  tabindex="-1"
-                >
-                  <div>
-                    <article
-                      class="c39"
-                    >
-                      <div
-                        class="c40"
-                      >
-                        <img
-                          alt="Population Zero"
-                          src="https://source.unsplash.com/user/willianjusten/300x140"
-                        />
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <div
-                          class="c42"
-                        >
-                          <h3
-                            class="c43"
-                          >
-                            Population Zero
-                          </h3>
-                          <h4
-                            class="c44"
-                          >
-                            Rockstar Games
-                          </h4>
-                        </div>
-                        <div
-                          class="c45"
-                          role="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            aria-label="Add to wishlist"
-                            class="c4"
-                            fill="currentColor"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0V0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="c46"
-                        >
-                          <div
-                            class="c47"
-                          >
-                            99,99 €
-                          </div>
-                          <div
-                            class="c48"
-                          >
-                            79,99 €
-                          </div>
-                          <button
-                            class="c49"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="c4"
-                              fill="currentColor"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 0h24v24H0V0z"
-                                fill="none"
-                              />
-                              <path
-                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section
-      class="c33 c58"
-    >
-      <h2
-        class="c35 c50"
-        color="white"
-      >
-        Upcomming
-      </h2>
-      <section
-        class="c37 c57"
-        color="white"
-      >
-        <section
-          class="c21"
-        >
-          <div
-            class="slick-slider slick-initialized"
-          >
-            <div
-              class="slick-list"
-            >
-              <div
-                class="slick-track"
-                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
-              >
-                <div
-                  aria-hidden="false"
-                  class="slick-slide slick-active slick-current"
-                  data-index="0"
-                  style="outline: none; width: 0px;"
-                  tabindex="-1"
-                >
-                  <div>
-                    <article
-                      class="c39"
-                    >
-                      <div
-                        class="c40"
-                      >
-                        <img
-                          alt="Population Zero"
-                          src="https://source.unsplash.com/user/willianjusten/300x140"
-                        />
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <div
-                          class="c42"
-                        >
-                          <h3
-                            class="c43"
-                          >
-                            Population Zero
-                          </h3>
-                          <h4
-                            class="c44"
-                          >
-                            Rockstar Games
-                          </h4>
-                        </div>
-                        <div
-                          class="c45"
-                          role="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            aria-label="Add to wishlist"
-                            class="c4"
-                            fill="currentColor"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0V0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="c46"
-                        >
-                          <div
-                            class="c47"
-                          >
-                            99,99 €
-                          </div>
-                          <div
-                            class="c48"
-                          >
-                            79,99 €
-                          </div>
-                          <button
-                            class="c49"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="c4"
-                              fill="currentColor"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 0h24v24H0V0z"
-                                fill="none"
-                              />
-                              <path
-                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <section
-        class="c51 c52"
-      >
-        <div
-          class="c53 c54"
-        >
-          <h2
-            class="c55"
-          >
-            Read Dead is back
-          </h2>
-          <h3
-            class="c56"
-          >
-            Come see John's new adventures
-          </h3>
-          <a
-            class="c13"
-            href="/games/rd2"
-          >
-            <span>
-              Buy Now
-            </span>
-          </a>
-        </div>
-      </section>
-      <section
-        class="c37 c57"
-        color="white"
-      >
-        <section
-          class="c21"
-        >
-          <div
-            class="slick-slider slick-initialized"
-          >
-            <div
-              class="slick-list"
-            >
-              <div
-                class="slick-track"
-                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
-              >
-                <div
-                  aria-hidden="false"
-                  class="slick-slide slick-active slick-current"
-                  data-index="0"
-                  style="outline: none; width: 0px;"
-                  tabindex="-1"
-                >
-                  <div>
-                    <article
-                      class="c39"
-                    >
-                      <div
-                        class="c40"
-                      >
-                        <img
-                          alt="Population Zero"
-                          src="https://source.unsplash.com/user/willianjusten/300x140"
-                        />
-                      </div>
-                      <div
-                        class="c41"
-                      >
-                        <div
-                          class="c42"
-                        >
-                          <h3
-                            class="c43"
-                          >
-                            Population Zero
-                          </h3>
-                          <h4
-                            class="c44"
-                          >
-                            Rockstar Games
-                          </h4>
-                        </div>
-                        <div
-                          class="c45"
-                          role="button"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            aria-label="Add to wishlist"
-                            class="c4"
-                            fill="currentColor"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M0 0h24v24H0V0z"
-                              fill="none"
-                            />
-                            <path
-                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
-                            />
-                          </svg>
-                        </div>
-                        <div
-                          class="c46"
-                        >
-                          <div
-                            class="c47"
-                          >
-                            99,99 €
-                          </div>
-                          <div
-                            class="c48"
-                          >
-                            79,99 €
-                          </div>
-                          <button
-                            class="c49"
-                          >
-                            <svg
-                              aria-hidden="true"
-                              class="c4"
-                              fill="currentColor"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M0 0h24v24H0V0z"
-                                fill="none"
-                              />
-                              <path
-                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <section
-      class="c33"
-    >
-      <h2
-        class="c35 c50"
-        color="white"
-      >
-        Free Games
-      </h2>
-      <section
-        class="c51 c52"
-      >
-        <div
-          class="c53 c54"
-        >
-          <h2
-            class="c55"
-          >
-            Read Dead is back
-          </h2>
-          <h3
-            class="c56"
-          >
-            Come see John's new adventures
-          </h3>
-          <a
-            class="c13"
-            href="/games/rd2"
-          >
-            <span>
-              Buy Now
-            </span>
-          </a>
-        </div>
-      </section>
-      <section
-        class="c37 c57"
         color="white"
       >
         <section
@@ -2382,16 +1721,604 @@ exports[`<Home /> should render menu and footer 1`] = `
     </section>
   </div>
   <section
-    class="c59"
+    class="c0 c34"
+  >
+    <h2
+      class="c35 c36"
+      color="white"
+    >
+      Most popular
+    </h2>
+    <section
+      class="c50 c51"
+    >
+      <div
+        class="c52 c53"
+      >
+        <h2
+          class="c54"
+        >
+          Read Dead is back
+        </h2>
+        <h3
+          class="c55"
+        >
+          Come see John's new adventures
+        </h3>
+        <a
+          class="c13"
+          href="/games/rd2"
+        >
+          <span>
+            Buy Now
+          </span>
+        </a>
+      </div>
+    </section>
+    <section
+      class="c37 c38"
+      color="white"
+    >
+      <section
+        class="c21"
+      >
+        <div
+          class="slick-slider slick-initialized"
+        >
+          <div
+            class="slick-list"
+          >
+            <div
+              class="slick-track"
+              style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+            >
+              <div
+                aria-hidden="false"
+                class="slick-slide slick-active slick-current"
+                data-index="0"
+                style="outline: none; width: 0px;"
+                tabindex="-1"
+              >
+                <div>
+                  <article
+                    class="c39"
+                  >
+                    <div
+                      class="c40"
+                    >
+                      <img
+                        alt="Population Zero"
+                        src="https://source.unsplash.com/user/willianjusten/300x140"
+                      />
+                    </div>
+                    <div
+                      class="c41"
+                    >
+                      <div
+                        class="c42"
+                      >
+                        <h3
+                          class="c43"
+                        >
+                          Population Zero
+                        </h3>
+                        <h4
+                          class="c44"
+                        >
+                          Rockstar Games
+                        </h4>
+                      </div>
+                      <div
+                        class="c45"
+                        role="button"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          aria-label="Add to wishlist"
+                          class="c4"
+                          fill="currentColor"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0V0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c46"
+                      >
+                        <div
+                          class="c47"
+                        >
+                          99,99 €
+                        </div>
+                        <div
+                          class="c48"
+                        >
+                          79,99 €
+                        </div>
+                        <button
+                          class="c49"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="c4"
+                            fill="currentColor"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0V0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  <div
+    class="c56"
+  >
+    <section
+      class="c0 c34"
+    >
+      <h2
+        class="c35 c36"
+        color="white"
+      >
+        Upcomming
+      </h2>
+      <section
+        class="c37 c38"
+        color="white"
+      >
+        <section
+          class="c21"
+        >
+          <div
+            class="slick-slider slick-initialized"
+          >
+            <div
+              class="slick-list"
+            >
+              <div
+                class="slick-track"
+                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+              >
+                <div
+                  aria-hidden="false"
+                  class="slick-slide slick-active slick-current"
+                  data-index="0"
+                  style="outline: none; width: 0px;"
+                  tabindex="-1"
+                >
+                  <div>
+                    <article
+                      class="c39"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <img
+                          alt="Population Zero"
+                          src="https://source.unsplash.com/user/willianjusten/300x140"
+                        />
+                      </div>
+                      <div
+                        class="c41"
+                      >
+                        <div
+                          class="c42"
+                        >
+                          <h3
+                            class="c43"
+                          >
+                            Population Zero
+                          </h3>
+                          <h4
+                            class="c44"
+                          >
+                            Rockstar Games
+                          </h4>
+                        </div>
+                        <div
+                          class="c45"
+                          role="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            aria-label="Add to wishlist"
+                            class="c4"
+                            fill="currentColor"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0V0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="c46"
+                        >
+                          <div
+                            class="c47"
+                          >
+                            99,99 €
+                          </div>
+                          <div
+                            class="c48"
+                          >
+                            79,99 €
+                          </div>
+                          <button
+                            class="c49"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="c4"
+                              fill="currentColor"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 0h24v24H0V0z"
+                                fill="none"
+                              />
+                              <path
+                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section
+      class="c0 c34"
+    >
+      <section
+        class="c50 c51"
+      >
+        <div
+          class="c52 c53"
+        >
+          <h2
+            class="c54"
+          >
+            Read Dead is back
+          </h2>
+          <h3
+            class="c55"
+          >
+            Come see John's new adventures
+          </h3>
+          <a
+            class="c13"
+            href="/games/rd2"
+          >
+            <span>
+              Buy Now
+            </span>
+          </a>
+        </div>
+      </section>
+      <section
+        class="c37 c38"
+        color="white"
+      >
+        <section
+          class="c21"
+        >
+          <div
+            class="slick-slider slick-initialized"
+          >
+            <div
+              class="slick-list"
+            >
+              <div
+                class="slick-track"
+                style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+              >
+                <div
+                  aria-hidden="false"
+                  class="slick-slide slick-active slick-current"
+                  data-index="0"
+                  style="outline: none; width: 0px;"
+                  tabindex="-1"
+                >
+                  <div>
+                    <article
+                      class="c39"
+                    >
+                      <div
+                        class="c40"
+                      >
+                        <img
+                          alt="Population Zero"
+                          src="https://source.unsplash.com/user/willianjusten/300x140"
+                        />
+                      </div>
+                      <div
+                        class="c41"
+                      >
+                        <div
+                          class="c42"
+                        >
+                          <h3
+                            class="c43"
+                          >
+                            Population Zero
+                          </h3>
+                          <h4
+                            class="c44"
+                          >
+                            Rockstar Games
+                          </h4>
+                        </div>
+                        <div
+                          class="c45"
+                          role="button"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            aria-label="Add to wishlist"
+                            class="c4"
+                            fill="currentColor"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0V0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="c46"
+                        >
+                          <div
+                            class="c47"
+                          >
+                            99,99 €
+                          </div>
+                          <div
+                            class="c48"
+                          >
+                            79,99 €
+                          </div>
+                          <button
+                            class="c49"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="c4"
+                              fill="currentColor"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M0 0h24v24H0V0z"
+                                fill="none"
+                              />
+                              <path
+                                d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  </div>
+  <section
+    class="c0 c34"
+  >
+    <h2
+      class="c35 c36"
+      color="white"
+    >
+      Free Games
+    </h2>
+    <section
+      class="c50 c51"
+    >
+      <div
+        class="c52 c53"
+      >
+        <h2
+          class="c54"
+        >
+          Read Dead is back
+        </h2>
+        <h3
+          class="c55"
+        >
+          Come see John's new adventures
+        </h3>
+        <a
+          class="c13"
+          href="/games/rd2"
+        >
+          <span>
+            Buy Now
+          </span>
+        </a>
+      </div>
+    </section>
+    <section
+      class="c37 c38"
+      color="white"
+    >
+      <section
+        class="c21"
+      >
+        <div
+          class="slick-slider slick-initialized"
+        >
+          <div
+            class="slick-list"
+          >
+            <div
+              class="slick-track"
+              style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+            >
+              <div
+                aria-hidden="false"
+                class="slick-slide slick-active slick-current"
+                data-index="0"
+                style="outline: none; width: 0px;"
+                tabindex="-1"
+              >
+                <div>
+                  <article
+                    class="c39"
+                  >
+                    <div
+                      class="c40"
+                    >
+                      <img
+                        alt="Population Zero"
+                        src="https://source.unsplash.com/user/willianjusten/300x140"
+                      />
+                    </div>
+                    <div
+                      class="c41"
+                    >
+                      <div
+                        class="c42"
+                      >
+                        <h3
+                          class="c43"
+                        >
+                          Population Zero
+                        </h3>
+                        <h4
+                          class="c44"
+                        >
+                          Rockstar Games
+                        </h4>
+                      </div>
+                      <div
+                        class="c45"
+                        role="button"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          aria-label="Add to wishlist"
+                          class="c4"
+                          fill="currentColor"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M0 0h24v24H0V0z"
+                            fill="none"
+                          />
+                          <path
+                            d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"
+                          />
+                        </svg>
+                      </div>
+                      <div
+                        class="c46"
+                      >
+                        <div
+                          class="c47"
+                        >
+                          99,99 €
+                        </div>
+                        <div
+                          class="c48"
+                        >
+                          79,99 €
+                        </div>
+                        <button
+                          class="c49"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="c4"
+                            fill="currentColor"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 0h24v24H0V0z"
+                              fill="none"
+                            />
+                            <path
+                              d="M11 9h2V6h3V4h-3V1h-2v3H8v2h3v3zm-4 9c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-8.9-5h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4l-3.87 7H8.53L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+  <section
+    class="c57"
   >
     <div
       class="c0"
     >
       <footer
-        class="c60"
+        class="c58"
       >
         <div
-          class="c61"
+          class="c59"
           color="black"
         >
           <svg
@@ -2477,13 +2404,13 @@ exports[`<Home /> should render menu and footer 1`] = `
           </svg>
         </div>
         <div
-          class="c62"
+          class="c60"
         >
           <div
-            class="c63"
+            class="c61"
           >
             <h2
-              class="c35 c64"
+              class="c35 c62"
               color="black"
             >
               Contact Us
@@ -2495,10 +2422,10 @@ exports[`<Home /> should render menu and footer 1`] = `
             </a>
           </div>
           <div
-            class="c63"
+            class="c61"
           >
             <h2
-              class="c35 c64"
+              class="c35 c62"
               color="black"
             >
               Follow us
@@ -2537,10 +2464,10 @@ exports[`<Home /> should render menu and footer 1`] = `
             </nav>
           </div>
           <div
-            class="c63"
+            class="c61"
           >
             <h2
-              class="c35 c64"
+              class="c35 c62"
               color="black"
             >
               Links
@@ -2567,10 +2494,10 @@ exports[`<Home /> should render menu and footer 1`] = `
           </div>
           <div
             aria-labelledby="footer-contact"
-            class="c63"
+            class="c61"
           >
             <h2
-              class="c35 c64"
+              class="c35 c62"
               color="black"
             >
               Location
@@ -2587,7 +2514,7 @@ exports[`<Home /> should render menu and footer 1`] = `
           </div>
         </div>
         <div
-          class="c65"
+          class="c63"
         >
           Won Games 2022 © All rights reserved.
         </div>
