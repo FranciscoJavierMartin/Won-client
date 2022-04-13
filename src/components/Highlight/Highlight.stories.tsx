@@ -1,6 +1,6 @@
 import { ComponentMeta, Story } from '@storybook/react';
 import Highlight, { HighlightProps } from '.';
-import item from './ mock';
+import item from './mock';
 
 export default {
   title: 'Highlight',

@@ -2,7 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home, { HomeProps } from '@/templates/Home';
 import bannersMock from '@/components/BannerSlider/mock';
 import gamesMock from '@/components/GameCardSlider/mock';
-import highlightMock from '@/components/Highlight/ mock';
+import highlightMock from '@/components/Highlight/mock';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   return {

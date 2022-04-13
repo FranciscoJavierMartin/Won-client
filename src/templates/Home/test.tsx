@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import { renderWithTheme } from '@/utils/tests/helpers';
 import bannersMock from '@/components/BannerSlider/mock';
 import gamesMock from '@/components/GameCardSlider/mock';
-import highlightMock from '@/components/Highlight/ mock';
+import highlightMock from '@/components/Highlight/mock';
 import Home from '.';
 
 const props = {
