@@ -393,7 +393,6 @@ exports[`<Home /> should render menu and footer 1`] = `
 
 .c36 {
   color: #030517;
-  font-size: 2.0rem;
   padding-left: 0.8rem;
   border-left: 0.7rem solid #3CD3C1;
   font-size: 2.0rem;
@@ -401,7 +400,6 @@ exports[`<Home /> should render menu and footer 1`] = `
 
 .c50 {
   color: #FAFAFA;
-  font-size: 2.0rem;
   padding-left: 0.8rem;
   border-left: 0.7rem solid #3CD3C1;
   font-size: 2.0rem;
@@ -409,7 +407,6 @@ exports[`<Home /> should render menu and footer 1`] = `
 
 .c64 {
   color: #030517;
-  font-size: 2.0rem;
   position: relative;
   margin-bottom: 3.2rem;
   font-size: 1.6rem;
@@ -1040,25 +1037,7 @@ exports[`<Home /> should render menu and footer 1`] = `
 }
 
 @media (min-width:768px) {
-  .c36 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (min-width:768px) {
   .c50 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c50 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (min-width:768px) {
-  .c64 {
     font-size: 2.8rem;
   }
 }
