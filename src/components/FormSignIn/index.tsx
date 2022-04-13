@@ -3,13 +3,14 @@ import { Email, Lock } from '@styled-icons/material-outlined';
 import Button from '@/components/Button';
 import TextField from '@/components/TextField';
 import * as S from './styles';
+import { FormLink, FormWrapper } from '../Form';
 
 export type FormSignInProps = {
   test?: boolean;
 };
 
 const FormSignIn: React.FC<FormSignInProps> = () => (
-  <S.Wrapper>
+  <FormWrapper>
     <form>
       <TextField
         name="email"
@@ -27,14 +28,14 @@ const FormSignIn: React.FC<FormSignInProps> = () => (
       <Button size="large" fullWidth>
         Sign In now
       </Button>
-      <S.FormLink>
+      <FormLink>
         Don&apos;t have and account?{' '}
         <Link href="/sign-p">
           <a>Sign Up</a>
         </Link>
-      </S.FormLink>
+      </FormLink>
     </form>
-  </S.Wrapper>
+  </FormWrapper>
 );
 
 export default FormSignIn;
