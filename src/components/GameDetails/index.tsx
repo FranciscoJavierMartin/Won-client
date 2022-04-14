@@ -8,14 +8,26 @@ type Platform = 'windows' | 'linux' | 'mac';
 const platformIcons = {
   linux: <Linux title="Linux" size={18} />,
   mac: <Apple title="Mac" size={18} />,
-  windows: <Windows title="Linux" size={18} />,
+  windows: <Windows title="Windows" size={18} />,
 };
+
+type Rating = 'FREE' | 'pegi3' | 'pegi7' | 'pegi12' | 'pegi16' | 'pegi18';
 
 export type GameDetailsProps = {
+  developer: string;
   platforms: Platform[];
+  releaseDate: string;
+  rating: Rating;
+  genres: string[];
 };
 
-const GameDetails: React.FC<GameDetailsProps> = ({ platforms }) => (
+const GameDetails: React.FC<GameDetailsProps> = ({
+  developer,
+  releaseDate,
+  platforms,
+  rating,
+  genres,
+}) => (
   <S.Wrapper>
     <MediaMatch greaterThan="small">
       <Heading lineLeft lineColor="secondary">
@@ -25,11 +37,17 @@ const GameDetails: React.FC<GameDetailsProps> = ({ platforms }) => (
     <S.Content>
       <S.Block>
         <S.Label>Developer</S.Label>
-        <S.Description>BioWare</S.Description>
+        <S.Description>{developer}</S.Description>
       </S.Block>
       <S.Block>
         <S.Label>Release Date</S.Label>
-        <S.Description>Oct 29, 2010</S.Description>
+        <S.Description>
+          {new Intl.DateTimeFormat('en-US', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric',
+          }).format(new Date(releaseDate))}
+        </S.Description>
       </S.Block>
       <S.Block>
         <S.Label>Platforms</S.Label>
@@ -45,11 +63,13 @@ const GameDetails: React.FC<GameDetailsProps> = ({ platforms }) => (
       </S.Block>
       <S.Block>
         <S.Label>Rating</S.Label>
-        <S.Description>18+</S.Description>
+        <S.Description>
+          {rating === 'FREE' ? 'FREE' : `${rating.replace('pegi', '')}+`}
+        </S.Description>
       </S.Block>
       <S.Block>
         <S.Label>Genres</S.Label>
-        <S.Description>Role-playing / Adventure / Fantasy</S.Description>
+        <S.Description>{genres.join(' / ')}</S.Description>
       </S.Block>
     </S.Content>
   </S.Wrapper>
