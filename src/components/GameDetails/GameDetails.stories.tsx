@@ -4,7 +4,17 @@ import GameDetails, { GameDetailsProps } from '.';
 export default {
   title: 'Game/GameDetails',
   component: GameDetails,
-  args: {},
+  args: {
+    platforms: ['windows', 'linux', 'mac'],
+  },
+  argTypes: {
+    platforms: {
+      control: {
+        type: 'inline-check',
+        options: ['windows', 'linux', 'mac'],
+      },
+    },
+  },
   parameters: {
     backgrounds: {
       default: 'won-dark',
