@@ -64,7 +64,7 @@ const GameDetails: React.FC<GameDetailsProps> = ({
       <S.Block>
         <S.Label>Rating</S.Label>
         <S.Description>
-          {rating === 'FREE' ? 'FREE' : `${rating.replace('pegi', '')}+`}
+          {rating === 'FREE' ? 'FREE' : `${rating?.replace('pegi', '')}+`}
         </S.Description>
       </S.Block>
       <S.Block>
