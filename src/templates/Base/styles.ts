@@ -1,3 +1,4 @@
+import { Container } from '@/components/Container';
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
@@ -6,6 +7,11 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+`;
+
+export const SectionMenu = styled(Container)`
+  margin-left: unset;
+  margin-right: unset;
 `;
 
 export const SectionFooter = styled.section`
