@@ -2,7 +2,7 @@ import { ArrowBackIos as ArrowLeft } from '@styled-icons/material-outlined/Arrow
 import { ArrowForwardIos as ArrowRight } from '@styled-icons/material-outlined/ArrowForwardIos';
 import Slider, { SliderSettings } from '@/components/Slider';
 import * as S from './styles';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Close } from '@styled-icons/material-outlined';
 
 const settings: SliderSettings = {
@@ -51,6 +51,20 @@ export type GalleryProps = {
 
 const Gallery: React.FC<GalleryProps> = ({ items }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleKeyUp = ({ key }: KeyboardEvent) => {
+      if (key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      window.removeEventListener('keyup', handleKeyUp);
+    };
+  }, []);
 
   return (
     <S.Wrapper>
