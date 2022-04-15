@@ -2,6 +2,8 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import Game, { GameProps } from '@/templates/Game';
 import galleryMock from '@/components/Gallery/mock';
+import gamesMock from '@/components/GameCardSlider/mock';
+import highligthMock from '@/components/Highlight/mock';
 
 export default function Index(
   props: InferGetStaticPropsType<typeof getStaticProps>
@@ -46,6 +48,9 @@ export const getStaticProps: GetStaticProps<GameProps> = async () => {
         rating: 'pegi18',
         genres: ['Action', 'Role-playing'],
       },
+      upcomingGames: gamesMock,
+      upcomingHighlight: highligthMock,
+      recommendedGames: gamesMock,
     },
   };
 };
