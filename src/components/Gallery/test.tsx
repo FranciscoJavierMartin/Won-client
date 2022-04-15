@@ -1,15 +1,36 @@
-import { screen } from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTheme } from '@/utils/tests/helpers';
 import Gallery from '.';
 import items from './mock';
 
 describe('<Gallery />', () => {
-  xit('should render the heading', () => {
-    const { container } = renderWithTheme(<Gallery items={items} />);
+  it('should render thumbnails as buttons', () => {
+    const { container } = renderWithTheme(
+      <Gallery items={items.slice(0, 2)} />
+    );
 
     expect(
-      screen.getByRole('heading', { name: /Gallery/i })
-    ).toBeInTheDocument();
+      screen.getByRole('button', { name: /Thumb - Gallery Image 1/i })
+    ).toHaveAttribute('src', items[0].src);
+
+    expect(
+      screen.getByRole('button', { name: /Thumb - Gallery Image 2/i })
+    ).toHaveAttribute('src', items[1].src);
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should handle open modal', () => {
+    renderWithTheme(<Gallery items={items.slice(0, 2)} />);
+    const modal = screen.getByLabelText('modal');
+
+    expect(modal.getAttribute('aria-hidden')).toBe('true');
+    expect(modal).toHaveStyle({ opacity: 0, pointerEvents: 'none' });
+
+    fireEvent.click(
+      screen.getByRole('button', { name: /Thumb - Gallery Image 1/i })
+    );
+
+    expect(modal.getAttribute('aria-hidden')).toBe('false');
+    expect(modal).toHaveStyle({ opacity: 1 });
   });
 });
