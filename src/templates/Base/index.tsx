@@ -12,7 +12,7 @@ const Base: React.FC<BaseProps> = ({ children }) => (
     <Container>
       <Menu />
     </Container>
-    <S.Content>{children}</S.Content>
+    {children}
     <S.SectionFooter>
       <Container>
         <Footer />
