@@ -1,6 +1,7 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import Game, { GameProps } from '@/templates/Game';
+import galleryMock from '@/components/Gallery/mock';
 
 export default function Index(
   props: InferGetStaticPropsType<typeof getStaticProps>
@@ -19,6 +20,7 @@ export const getStaticProps: GetStaticProps<GameProps> = async () => {
         description:
           'Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality',
       },
+      gallery: galleryMock,
     },
   };
 };
