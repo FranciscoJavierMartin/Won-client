@@ -10,9 +10,9 @@ const props = {
   newGames: gamesMock,
   mostPopularHighlight: highlightMock,
   mostPopularGames: gamesMock,
-  upcommingGames: gamesMock,
-  upcommingHighligth: highlightMock,
-  upcommingMoreGames: gamesMock,
+  upcomingGames: gamesMock,
+  upcomingHighligth: highlightMock,
+  upcomingMoreGames: gamesMock,
   freeGames: gamesMock,
   freeHighligth: highlightMock,
 };
