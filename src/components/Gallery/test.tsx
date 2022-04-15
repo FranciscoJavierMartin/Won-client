@@ -34,6 +34,15 @@ describe('<Gallery />', () => {
     expect(modal).toHaveStyle({ opacity: 1 });
   });
 
+  it('should handle open modal with selected image', async () => {
+    renderWithTheme(<Gallery items={items.slice(0, 2)} />);
+    fireEvent.click(
+      screen.getByRole('button', { name: /Thumb - Gallery Image 2/i })
+    );
+    const img = await screen.findByRole('img', { name: /Gallery Image 2/i });
+    expect(img.parentElement?.parentElement).toHaveClass('slick-active');
+  });
+
   it('should handle close modal when overlay or click on button', () => {
     renderWithTheme(<Gallery items={items.slice(0, 2)} />);
     const modal = screen.getByLabelText('modal');
