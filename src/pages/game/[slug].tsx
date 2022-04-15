@@ -38,6 +38,14 @@ export const getStaticProps: GetStaticProps<GameProps> = async () => {
       },
       gallery: galleryMock,
       description: descriptionHTML,
+      details: {
+        developer: 'CD PROJEKT RED',
+        releaseDate: '2020-12-10T23:00:00',
+        platforms: ['windows'],
+        publisher: 'CD PROJEKT RED',
+        rating: 'pegi18',
+        genres: ['Action', 'Role-playing'],
+      },
     },
   };
 };

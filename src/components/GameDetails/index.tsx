@@ -15,6 +15,7 @@ type Rating = 'FREE' | 'pegi3' | 'pegi7' | 'pegi12' | 'pegi16' | 'pegi18';
 
 export type GameDetailsProps = {
   developer: string;
+  publisher: string;
   platforms: Platform[];
   releaseDate: string;
   rating: Rating;
@@ -27,6 +28,7 @@ const GameDetails: React.FC<GameDetailsProps> = ({
   platforms,
   rating,
   genres,
+  publisher,
 }) => (
   <S.Wrapper>
     <MediaMatch greaterThan="small">
@@ -59,7 +61,7 @@ const GameDetails: React.FC<GameDetailsProps> = ({
       </S.Block>
       <S.Block>
         <S.Label>Publisher</S.Label>
-        <S.Description>EA</S.Description>
+        <S.Description>{publisher}</S.Description>
       </S.Block>
       <S.Block>
         <S.Label>Rating</S.Label>

@@ -1,4 +1,5 @@
 import Gallery, { GalleryImageProps } from '@/components/Gallery';
+import GameDetails, { GameDetailsProps } from '@/components/GameDetails';
 import GameInfo, { GameInfoProps } from '@/components/GameInfo';
 import TextContent from '@/components/TextContent';
 import Base from '@/templates/Base';
@@ -9,6 +10,7 @@ export type GameProps = {
   gameInfo: GameInfoProps;
   gallery?: GalleryImageProps[];
   description: string;
+  details: GameDetailsProps;
 };
 
 const Game: React.FC<GameProps> = ({
@@ -16,6 +18,7 @@ const Game: React.FC<GameProps> = ({
   gameInfo,
   gallery,
   description,
+  details,
 }) => (
   <Base>
     <S.Cover src={cover} role="image" aria-label="cover" />
@@ -29,6 +32,9 @@ const Game: React.FC<GameProps> = ({
       <S.SectionDescription>
         <TextContent title="Descrition" content={description} />
       </S.SectionDescription>
+      <S.SectionGameDetails>
+        <GameDetails {...details} />
+      </S.SectionGameDetails>
     </S.Main>
   </Base>
 );
