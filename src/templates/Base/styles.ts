@@ -10,8 +10,10 @@ export const Wrapper = styled.div`
 `;
 
 export const SectionMenu = styled(Container)`
-  margin-left: unset;
-  margin-right: unset;
+  ${media.lessThan('medium')`
+    margin-left: unset;
+    margin-right: unset;
+  `}
 `;
 
 export const Content = styled.div`

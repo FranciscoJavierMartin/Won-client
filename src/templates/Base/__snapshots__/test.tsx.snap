@@ -24,11 +24,6 @@ exports[`<Base /> should render menu, foote and children 1`] = `
   height: 100vh;
 }
 
-.c2 {
-  margin-left: unset;
-  margin-right: unset;
-}
-
 .c3 {
   margin-top: 4.0rem;
   -webkit-flex: 1 0 auto;
@@ -43,6 +38,13 @@ exports[`<Base /> should render menu, foote and children 1`] = `
   background-color: #FAFAFA;
   -webkit-clip-path: polygon(0 5%,100% 0%,100% 100%,0 100%);
   clip-path: polygon(0 5%,100% 0%,100% 100%,0 100%);
+}
+
+@media (max-width:768px) {
+  .c2 {
+    margin-left: unset;
+    margin-right: unset;
+  }
 }
 
 @media (min-width:768px) {
