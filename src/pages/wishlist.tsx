@@ -12,6 +12,7 @@ export default function Index(
 export const getStaticProps: GetStaticProps<WishlistProps> = async () => {
   return {
     props: {
+      games: gamesMock,
       recommendedGames: gamesMock,
       recommendedHighlight: highligthMock,
     },
