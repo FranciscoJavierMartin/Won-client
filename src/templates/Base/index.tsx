@@ -9,9 +9,9 @@ export type BaseProps = {
 
 const Base: React.FC<BaseProps> = ({ children }) => (
   <S.Wrapper>
-    <S.SectionMenu>
+    <Container>
       <Menu />
-    </S.SectionMenu>
+    </Container>
     <S.Content>{children}</S.Content>
     <S.SectionFooter>
       <Container>

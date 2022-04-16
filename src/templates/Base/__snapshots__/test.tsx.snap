@@ -2,6 +2,7 @@
 
 exports[`<Base /> should render menu, foote and children 1`] = `
 .c1 {
+  width: 100%;
   max-width: 130rem;
   margin-left: auto;
   margin-right: auto;
@@ -17,21 +18,21 @@ exports[`<Base /> should render menu, foote and children 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: 100vh;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 100vh;
 }
 
-.c3 {
+.c2 {
   margin-top: 4.0rem;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
 }
 
-.c4 {
+.c3 {
   margin-top: 4.0rem;
   padding-bottom: 1.6rem;
   padding-top: 5.6rem;
@@ -40,15 +41,8 @@ exports[`<Base /> should render menu, foote and children 1`] = `
   clip-path: polygon(0 5%,100% 0%,100% 100%,0 100%);
 }
 
-@media (max-width:768px) {
-  .c2 {
-    margin-left: unset;
-    margin-right: unset;
-  }
-}
-
 @media (min-width:768px) {
-  .c4 {
+  .c3 {
     padding-top: calc(5.6rem * 2);
     -webkit-clip-path: polygon(0 15%,100% 0%,100% 100%,0 100%);
     clip-path: polygon(0 15%,100% 0%,100% 100%,0 100%);
@@ -59,21 +53,21 @@ exports[`<Base /> should render menu, foote and children 1`] = `
   class="c0"
 >
   <div
-    class="c1 c2"
+    class="c1"
   >
     <div
       data-testid="Mock Menu"
     />
   </div>
   <div
-    class="c3"
+    class="c2"
   >
     <h1>
       Heading
     </h1>
   </div>
   <section
-    class="c4"
+    class="c3"
   >
     <div
       class="c1"
