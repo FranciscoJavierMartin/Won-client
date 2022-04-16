@@ -28,7 +28,7 @@ describe('<Empty />', () => {
     expect(
       screen.getByRole('link', { name: /go back to store/i })
     ).toHaveAttribute('href', '/');
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.parentElement).toMatchSnapshot();
   });
 
   it('should not render link when hasLink is false', () => {
