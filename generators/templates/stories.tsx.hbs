@@ -5,6 +5,11 @@ export default {
   title: '{{pascalCase name}}',
   component: {{pascalCase name}},
   args: {},
+  parameters: {
+    backgrounds: {
+      default: 'won-dark',
+    },
+  },
 } as ComponentMeta<typeof {{pascalCase name}}>;
 
 export const Default: Story<{{pascalCase name}}Props> = (args) => <{{pascalCase name}} {...args} />;
