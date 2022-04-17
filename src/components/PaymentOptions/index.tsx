@@ -3,6 +3,7 @@ import Heading from '@/components/Heading';
 import Radio from '@/components/Radio';
 import Button from '@/components/Button';
 import * as S from './styles';
+import { useState } from 'react';
 
 export type PaymentCard = {
   number: string;
@@ -18,44 +19,55 @@ export type PaymentOptionsProps = {
 const PaymentOptions: React.FC<PaymentOptionsProps> = ({
   cards,
   handlePayment,
-}) => (
-  <S.Wrapper>
-    <S.Body>
-      <Heading color="black" size="small" lineBottom>
-        Payment
-      </Heading>
-      <S.CardList>
-        {cards &&
-          cards?.map((card) => (
-            <S.CardItem key={card.number}>
-              <S.CardInfo>
-                <img src={card.img} alt={card.flag} />
-                {card.number}
-              </S.CardInfo>
-              <Radio
-                name="credit-card"
-                id={card.number}
-                value={card.number}
-                onCheck={() => {
-                  console.log('Hello');
-                }}
-              />
-            </S.CardItem>
-          ))}
-        <S.AddCard role="button">
-          <Add size={14} /> Add a new credit card
-        </S.AddCard>
-      </S.CardList>
-    </S.Body>
-    <S.Footer>
-      <Button as="a" fullWidth minimal>
-        Continue shopping
-      </Button>
-      <Button fullWidth icon={<ShoppingCart />} onClick={handlePayment}>
-        Buy now
-      </Button>
-    </S.Footer>
-  </S.Wrapper>
-);
+}) => {
+  const [isChecked, setIsChecked] = useState<boolean>(false);
+
+  return (
+    <S.Wrapper>
+      <S.Body>
+        <Heading color="black" size="small" lineBottom>
+          Payment
+        </Heading>
+        <S.CardList>
+          {cards &&
+            cards?.map((card) => (
+              <S.CardItem key={card.number}>
+                <S.CardInfo>
+                  <img src={card.img} alt={card.flag} />
+                  {card.number}
+                </S.CardInfo>
+                <Radio
+                  name="credit-card"
+                  id={card.number}
+                  value={card.number}
+                  onCheck={() => {
+                    if (!isChecked) {
+                      setIsChecked(true);
+                    }
+                  }}
+                />
+              </S.CardItem>
+            ))}
+          <S.AddCard role="button">
+            <Add size={14} /> Add a new credit card
+          </S.AddCard>
+        </S.CardList>
+      </S.Body>
+      <S.Footer>
+        <Button as="a" fullWidth minimal>
+          Continue shopping
+        </Button>
+        <Button
+          fullWidth
+          icon={<ShoppingCart />}
+          onClick={handlePayment}
+          disabled={!isChecked}
+        >
+          Buy now
+        </Button>
+      </S.Footer>
+    </S.Wrapper>
+  );
+};
 
 export default PaymentOptions;
