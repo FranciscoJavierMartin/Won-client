@@ -10,6 +10,7 @@ import CartList, { CartListProps } from '@/components/CartList';
 import PaymentOptions, {
   PaymentOptionsProps,
 } from '@/components/PaymentOptions';
+import Empty from '@/components/Empty';
 
 export type CartProps = {
   recommendedGames: GameCardProps[];
@@ -34,10 +35,18 @@ const Cart: React.FC<CartProps> = ({
         <Heading lineLeft lineColor="secondary">
           My Cart
         </Heading>
-        <S.Content>
-          <CartList items={items} total={total} />
-          <PaymentOptions handlePayment={handlePayment} cards={cards} />
-        </S.Content>
+        {items.length > 0 ? (
+          <S.Content>
+            <CartList items={items} total={total} />
+            <PaymentOptions handlePayment={handlePayment} cards={cards} />
+          </S.Content>
+        ) : (
+          <Empty
+            title="You cart is empty"
+            description="Go back to the store and explore great games and offers"
+            hasLink
+          />
+        )}
         <Divider />
       </Container>
       <Showcase
