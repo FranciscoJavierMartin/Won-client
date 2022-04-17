@@ -5,7 +5,7 @@ import PaymentOptions from '.';
 import cardsMock from './mock';
 
 xdescribe('<PaymentOptions />', () => {
-  it('should render the heading', () => {
+  it('should render the saved card options and the add new card button', () => {
     const { container } = renderWithTheme(
       <PaymentOptions cards={cardsMock} handlePayment={jest.fn} />
     );

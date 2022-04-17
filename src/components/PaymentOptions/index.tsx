@@ -29,25 +29,24 @@ const PaymentOptions: React.FC<PaymentOptionsProps> = ({
           Payment
         </Heading>
         <S.CardList>
-          {cards &&
-            cards?.map((card) => (
-              <S.CardItem key={card.number}>
-                <S.CardInfo>
-                  <img src={card.img} alt={card.flag} />
-                  {card.number}
-                </S.CardInfo>
-                <Radio
-                  name="credit-card"
-                  id={card.number}
-                  value={card.number}
-                  onCheck={() => {
-                    if (!isChecked) {
-                      setIsChecked(true);
-                    }
-                  }}
-                />
-              </S.CardItem>
-            ))}
+          {cards?.map((card) => (
+            <S.CardItem key={card.number}>
+              <S.CardInfo>
+                <img src={card.img} alt={card.flag} />
+                {card.number}
+              </S.CardInfo>
+              <Radio
+                name="credit-card"
+                id={card.number}
+                value={card.number}
+                onCheck={() => {
+                  if (!isChecked) {
+                    setIsChecked(true);
+                  }
+                }}
+              />
+            </S.CardItem>
+          ))}
           <S.AddCard role="button">
             <Add size={14} /> Add a new credit card
           </S.AddCard>
