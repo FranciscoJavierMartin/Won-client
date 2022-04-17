@@ -31,4 +31,22 @@ describe('<GameItem />', () => {
       screen.getByRole('link', { name: `Get ${props.title} here` })
     ).toHaveAttribute('href', downloadLink);
   });
+
+  it('should render payment info', () => {
+    const paymentInfo = {
+      flag: 'mastercard',
+      img: '/img/master-card.png',
+      number: '*** *** **** 4326',
+      purchaseDate: 'Purchase made on 17/04/2022 at 13:55',
+    };
+
+    renderWithTheme(<GameItem {...props} paymentInfo={paymentInfo} />);
+    expect(screen.getByRole('img', { name: paymentInfo.flag })).toHaveAttribute(
+      'src',
+      paymentInfo.img
+    );
+
+    expect(screen.getByText(paymentInfo.number)).toBeInTheDocument();
+    expect(screen.getByText(paymentInfo.purchaseDate)).toBeInTheDocument();
+  });
 });
