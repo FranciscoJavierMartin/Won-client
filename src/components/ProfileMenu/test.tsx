@@ -16,4 +16,12 @@ describe('<ProfileMenu />', () => {
     expect(screen.getByRole('link', { name: /sign out/i })).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render menu with an active link defined', () => {
+    renderWithTheme(<ProfileMenu activeLink="/profile/cards" />);
+    expect(screen.getByRole('link', { name: /my cards/i })).toHaveStyle({
+      background: '#F231A5',
+      color: '#FAFAFA',
+    });
+  });
 });
