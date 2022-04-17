@@ -11,7 +11,6 @@ export type ButtonProps = {
   fullWidth?: boolean;
   minimal?: boolean;
   icon?: JSX.Element;
-  onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void;
   as?: React.ElementType;
 } & ButtonTypes;
 
