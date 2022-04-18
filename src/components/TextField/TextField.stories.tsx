@@ -7,11 +7,11 @@ export default {
   component: TextField,
   args: {
     label: 'E-mail',
-    labelFor: 'Email',
-    id: 'Email',
+    name: 'Email',
     initialValue: '',
     placeholder: 'john@doe.com',
     icon: <Email />,
+    disabled: false,
   },
   argTypes: {
     onInput: { action: 'changed' },
