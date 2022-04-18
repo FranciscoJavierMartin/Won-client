@@ -2,7 +2,6 @@ import Heading from '../Heading';
 import { PaymentCard } from '../PaymentOptions';
 import * as S from './styles';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
 export type CardsListProps = {
   cards?: PaymentCard[];
 };
