@@ -7,7 +7,7 @@ import * as S from './styles';
 export type FormProfileProps = {};
 
 const FormProfile: React.FC<FormProfileProps> = () => (
-  <S.Wrapper>
+  <>
     <Heading lineBottom color="black" size="small">
       My profile
     </Heading>
@@ -40,7 +40,7 @@ const FormProfile: React.FC<FormProfileProps> = () => (
       />
       <Button size="large">Save</Button>
     </S.Form>
-  </S.Wrapper>
+  </>
 );
 
 export default FormProfile;
