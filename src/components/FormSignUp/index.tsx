@@ -4,9 +4,8 @@ import TextField from '@/components/TextField';
 import Button from '@/components/Button';
 import { FormWrapper, FormLink } from '@/components/Form';
 
-export type FormSignUpProps = {
-  test?: boolean;
-};
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type FormSignUpProps = {};
 
 const FormSignUp: React.FC<FormSignUpProps> = () => (
   <FormWrapper>
