@@ -2,13 +2,37 @@ import { screen } from '@testing-library/react';
 import { renderWithTheme } from '@/utils/tests/helpers';
 import Profile from '.';
 
-describe('<Profile />', () => {
-  xit('should render component', () => {
-    const { container } = renderWithTheme(<Profile />);
+jest.mock('next/router', () => ({
+  useRouter: jest.fn(() => ({ asPath: '/profile/me' })),
+}));
 
-    expect(
-      screen.getByRole('heading', { name: /Profile/i })
-    ).toBeInTheDocument();
+jest.mock('@/templates/Base', () => ({
+  __esModule: true,
+  default: function Mock({ children }: { children: React.ReactNode }) {
+    return <div data-testid="Mock Base">{children}</div>;
+  },
+}));
+
+jest.mock('@/components/Heading', () => ({
+  __esModule: true,
+  default: function Mock({ children }: { children: React.ReactNode }) {
+    return <div data-testid="Mock Heading">{children}</div>;
+  },
+}));
+
+jest.mock('@/components/ProfileMenu', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock ProfileMenu" />;
+  },
+}));
+describe('<Profile />', () => {
+  it('should render sections', () => {
+    const { container } = renderWithTheme(<Profile>Lorem ipsum</Profile>);
+
+    expect(screen.getByText('Lorem ipsum')).toBeInTheDocument();
+    expect(screen.getByText('My profile')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock ProfileMenu')).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
   });
 });

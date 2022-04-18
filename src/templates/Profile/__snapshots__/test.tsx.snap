@@ -1,11 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Profile /> should render component 1`] = `
+exports[`<Profile /> should render sections 1`] = `
+.c0 {
+  width: 100%;
+  max-width: 130rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(3.2rem / 2);
+  padding-right: calc(3.2rem / 2);
+}
+
+.c1 {
+  margin-top: 3.2rem;
+}
+
+.c2 {
+  background-color: #FAFAFA;
+  color: #030517;
+  padding: 1.6rem;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    display: grid;
+    grid-template-columns: 32rem 1fr;
+    gap: calc(3.2rem * 2);
+  }
+}
+
 <div
-  class=""
+  data-testid="Mock Base"
 >
-  <h1>
-    Profile
-  </h1>
+  <div
+    class="c0"
+  >
+    <div
+      data-testid="Mock Heading"
+    >
+      My profile
+    </div>
+    <main
+      class="c1"
+    >
+      <div
+        data-testid="Mock ProfileMenu"
+      />
+      <div
+        class="c2"
+      >
+        Lorem ipsum
+      </div>
+    </main>
+  </div>
 </div>
 `;
