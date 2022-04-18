@@ -1,57 +1,99 @@
+import { useState } from 'react';
+import { Close, FilterList } from '@styled-icons/material-outlined';
 import Checkbox from '@/components/Checkbox';
 import Heading from '@/components/Heading';
 import Button from '../Button';
 import Radio from '../Radio';
 import * as S from './styles';
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type ExploreSidebarProps = {};
+export type ItemProps = {
+  title: string;
+  name: string;
+  type: string;
+  fields: Field[];
+};
 
-const ExploreSidebar: React.FC<ExploreSidebarProps> = () => (
-  <S.Wrapper>
-    <Heading lineBottom lineColor="secondary" size="small">
-      Price
-    </Heading>
-    <Checkbox name="under-50" label="Under 20 €" labelFor="under-20" />
-    <Checkbox name="under-50" label="Under 30 €" labelFor="under-30" />
-    <Checkbox name="under-50" label="Under 40 €" labelFor="under-40" />
-    <Checkbox name="under-50" label="Under 50 €" labelFor="under-50" />
-    <Checkbox name="free" label="Free" labelFor="free" />
-    <Checkbox name="discounted" label="Discounted" labelFor="discounted" />
-    <Heading lineBottom lineColor="secondary" size="small">
-      Sort by
-    </Heading>
-    <Radio
-      id="high-to-low"
-      name="sort-by"
-      label="High to low"
-      labelFor="high-to-low"
-      value="high-to-low"
-    />
-    <Radio
-      id="low-to-high"
-      name="sort-by"
-      label="Low to high"
-      labelFor="low-to-high"
-      value="low-to-high"
-    />
-    <Heading lineBottom lineColor="secondary" size="small">
-      System
-    </Heading>
-    <Checkbox name="windows" label="Windows" labelFor="windows" />
-    <Checkbox name="mac" label="Mac" labelFor="mac" />
-    <Checkbox name="linux" label="Linux" labelFor="linux" />
-    <Heading lineBottom lineColor="secondary" size="small">
-      Genre
-    </Heading>
-    <Checkbox name="action" label="Action" labelFor="action" />
-    <Checkbox name="adventure" label="Adventure" labelFor="adventures" />
-    <Checkbox name="fps" label="FPS" labelFor="fps" />
-    <Checkbox name="mmorpg" label="MMORPG" labelFor="mmorpg" />
-    <Button fullWidth size="medium">
-      Filter
-    </Button>
-  </S.Wrapper>
-);
+type Field = {
+  label: string;
+  name: string;
+};
+
+type Values = {
+  [field: string]: boolean | string;
+};
+
+export type ExploreSidebarProps = {
+  items: ItemProps[];
+  initialValues?: Values;
+  onFilter: (values: Values) => void;
+};
+
+const ExploreSidebar: React.FC<ExploreSidebarProps> = ({
+  items,
+  onFilter,
+  initialValues = {},
+}) => {
+  const [values, setValues] = useState<Values>(initialValues);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const handleChange = (name: string, value: string | boolean) => {
+    setValues((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleFilter = () => {
+    onFilter(values);
+    setIsOpen(false);
+  };
+
+  return (
+    <S.Wrapper isOpen={isOpen}>
+      <S.Overlay aria-hidden={isOpen} />
+      <S.IconWrapper>
+        <FilterList aria-label="open filters" onClick={() => setIsOpen(true)} />
+        <Close aria-label="close filters" onClick={() => setIsOpen(false)} />
+      </S.IconWrapper>
+      <S.Content>
+        {items.map((item) => (
+          <S.Items key={item.title}>
+            <Heading lineBottom lineColor="secondary" size="small">
+              {item.title}
+            </Heading>
+
+            {item.type === 'checkbox' &&
+              item.fields.map((field) => (
+                <Checkbox
+                  key={field.name}
+                  name={field.name}
+                  label={field.label}
+                  labelFor={field.name}
+                  isChecked={!!values[field.name]}
+                  onCheck={(v) => handleChange(field.name, v)}
+                />
+              ))}
+
+            {item.type === 'radio' &&
+              item.fields.map((field) => (
+                <Radio
+                  key={field.name}
+                  id={field.name}
+                  value={field.name}
+                  name={item.name}
+                  label={field.label}
+                  labelFor={field.name}
+                  defaultChecked={field.name === values[item.name]}
+                  onChange={() => handleChange(item.name, field.name)}
+                />
+              ))}
+          </S.Items>
+        ))}
+      </S.Content>
+      <S.Footer>
+        <Button fullWidth size="medium" onClick={handleFilter}>
+          Filter
+        </Button>
+      </S.Footer>
+    </S.Wrapper>
+  );
+};
 
 export default ExploreSidebar;
