@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Games /> should render sections 1`] = `
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c2 {
+  display: grid;
+  margin: 3.2rem 0;
+  grid-gap: 3.2rem;
+  grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
+}
+
+.c0 {
+  width: 100%;
+  max-width: 130rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(3.2rem / 2);
+  padding-right: calc(3.2rem / 2);
+}
+
+.c3 {
+  color: #FAFAFA;
+  text-align: center;
+  padding: 3.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.c3 svg > {
+  color: #F231A5;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    display: grid;
+    grid-template-columns: 26rem 1fr;
+    gap: 3.2rem;
+  }
+}
+
+<div
+  data-testid="Mock Base"
+>
+  <div
+    class="c0 c1"
+  >
+    <div
+      data-testid="Mock ExploreSidebar"
+    />
+    <section>
+      <div
+        class="c2"
+      >
+        <div
+          data-testid="Mock GameCard"
+        />
+      </div>
+      <div
+        class="c3"
+        role="button"
+      >
+        <p>
+          Show More
+        </p>
+        <svg
+          aria-hidden="true"
+          class="c4"
+          fill="currentColor"
+          focusable="false"
+          height="35"
+          viewBox="0 0 24 24"
+          width="35"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0V0z"
+            fill="none"
+          />
+          <path
+            d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+          />
+        </svg>
+      </div>
+    </section>
+  </div>
+</div>
+`;
