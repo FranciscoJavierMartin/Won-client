@@ -13,4 +13,9 @@ describe('<CartList />', () => {
     expect(screen.getByText('129.98 €')).toHaveStyle({ color: '#F231A5' });
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('should render the button', () => {
+    renderWithTheme(<CartList items={itemsMock} total="129.98 €" hasButton />);
+    expect(screen.getByText(/buy it now/i)).toBeInTheDocument();
+  });
 });
