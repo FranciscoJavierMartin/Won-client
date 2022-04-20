@@ -5,15 +5,20 @@ export default {
   title: 'Menu',
   component: Menu,
   args: {},
+  parameters: {
+    layout: 'fullscreen',
+    backgrounds: {
+      default: 'won-dark',
+    },
+  },
 } as ComponentMeta<typeof Menu>;
 
 export const Default: Story<MenuProps> = (args) => <Menu {...args} />;
 
 Default.args = {};
 
-Default.parameters = {
-  layout: 'fullscreen',
-  backgrounds: {
-    default: 'won-dark',
-  },
+export const Logged: Story<MenuProps> = (args) => <Menu {...args} />;
+
+Logged.args = {
+  username: 'John Doe',
 };
