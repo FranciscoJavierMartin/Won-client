@@ -5,11 +5,11 @@ import { GameItemProps } from '../GameItem';
 import * as S from './styles';
 
 export type CartDropdownProps = {
-  items: GameItemProps[];
-  total: string;
+  items?: GameItemProps[];
+  total?: string;
 };
 
-const CartDropdown: React.FC<CartDropdownProps> = ({ items, total }) => (
+const CartDropdown: React.FC<CartDropdownProps> = ({ items = [], total }) => (
   <S.Wrapper>
     <Dropdown title={<CartIcon quantity={items.length} />}>
       <CartList items={items} total={total} hasButton />

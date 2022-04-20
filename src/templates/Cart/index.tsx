@@ -35,7 +35,7 @@ const Cart: React.FC<CartProps> = ({
         <Heading lineLeft lineColor="secondary">
           My Cart
         </Heading>
-        {items.length > 0 ? (
+        {items?.length ? (
           <S.Content>
             <CartList items={items} total={total} />
             <PaymentOptions handlePayment={handlePayment} cards={cards} />

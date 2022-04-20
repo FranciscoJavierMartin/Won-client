@@ -23,3 +23,14 @@ export const Default: Story<CartDropdownProps> = (args) => (
 );
 
 Default.args = {};
+
+export const Empty: Story<CartDropdownProps> = (args) => (
+  <div style={{ maxWidth: '98%', display: 'flex', justifyContent: 'flex-end' }}>
+    <CartDropdown {...args} />
+  </div>
+);
+
+Empty.args = {
+  items: undefined,
+  total: undefined,
+};

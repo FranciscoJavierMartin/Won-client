@@ -298,7 +298,7 @@ exports[`<CartDropdown /> should render CartIcon and its badge 1`] = `
       aria-hidden="true"
       class="c6 c7"
     >
-      <main
+      <div
         class="c8 c9"
       >
         <div
@@ -377,7 +377,7 @@ exports[`<CartDropdown /> should render CartIcon and its badge 1`] = `
             </span>
           </a>
         </div>
-      </main>
+      </div>
     </div>
   </div>
 </div>
