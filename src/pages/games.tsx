@@ -23,7 +23,8 @@ export const getStaticProps: GetStaticProps<GamesProps> = async () => {
   return {
     props: {
       games: data?.games?.data.map(
-        ({ attributes: { name, developers, cover, price } }) => ({
+        ({ attributes: { name, developers, cover, price, slug } }) => ({
+          slug,
           title: name,
           developer: developers.data[0].attributes.name,
           img: cover.data?.attributes.url
