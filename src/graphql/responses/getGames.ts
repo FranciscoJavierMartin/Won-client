@@ -38,14 +38,6 @@ export interface Games {
   data: Datum[];
 }
 
-// export interface Data {
-//   games: Games;
-// }
-
 export interface GetGamesQueryResult {
   games: Games;
 }
-
-// export interface GetGamesQueryResult {
-//   data: Data;
-// }

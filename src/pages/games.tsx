@@ -2,8 +2,8 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Games, { GamesProps } from '@/templates/Games';
 import filterItemsMock from '@/components/ExploreSidebar/mock';
 import { initializeApollo } from '@/utils/apollo';
-import { gql } from '@apollo/client';
-import { GetGamesQueryResult } from 'graphql/queries/getGames';
+import { GetGamesQueryResult } from '@/graphql/responses/getGames';
+import { GET_GAMES_QUERY } from '@/graphql/queries/games';
 
 export default function Index(
   props: InferGetStaticPropsType<typeof getStaticProps>
@@ -13,35 +13,17 @@ export default function Index(
 
 export const getStaticProps: GetStaticProps<GamesProps> = async () => {
   const apolloClient = initializeApollo();
-  const { data } = await apolloClient.query<GetGamesQueryResult>({
-    query: gql`
-      query GetGames {
-        games {
-          data {
-            attributes {
-              name
-              slug
-              cover {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-              developers {
-                data {
-                  attributes {
-                    name
-                  }
-                }
-              }
-              price
-            }
-          }
-        }
-      }
-    `,
+  const { data } = await apolloClient.query<
+    GetGamesQueryResult,
+    { limit: number }
+  >({
+    query: GET_GAMES_QUERY,
+    variables: {
+      limit: 9,
+    },
   });
+
+  console.log('L', data.games.data.length);
 
   return {
     props: {
