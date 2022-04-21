@@ -12,6 +12,7 @@ module.exports = {
   modulePaths: ['<rootDir>/src', '<rootDir>/.jest'],
   moduleNameMapper: {
     '@/components/(.*)': '<rootDir>/src/components/$1',
+    '@/graphql/(.*)': '<rootDir>/src/graphql/$1',
     '@/templates/(.*)': '<rootDir>/src/templates/$1',
     '@/utils/(.*)': '<rootDir>/src/utils/$1',
   },
