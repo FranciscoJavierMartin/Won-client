@@ -23,8 +23,6 @@ export const getStaticProps: GetStaticProps<GamesProps> = async () => {
     },
   });
 
-  console.log('L', data.games.data.length);
-
   return {
     props: {
       games: data.games.data.map(
