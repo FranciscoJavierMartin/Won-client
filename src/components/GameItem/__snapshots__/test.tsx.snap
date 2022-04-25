@@ -108,7 +108,7 @@ exports[`<GameItem /> should render component 1`] = `
       <p
         class="c5"
       >
-        79.99 €
+        79,99 €
       </p>
     </div>
   </div>

@@ -156,7 +156,7 @@ exports[`<CartList /> should render component 1`] = `
         <p
           class="c6"
         >
-          79.99 €
+          79,99 €
         </p>
       </div>
     </div>
@@ -186,7 +186,7 @@ exports[`<CartList /> should render component 1`] = `
         <p
           class="c6"
         >
-          49.99 €
+          49,99 €
         </p>
       </div>
     </div>

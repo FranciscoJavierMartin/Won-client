@@ -5,7 +5,7 @@ import GameItem from '.';
 const props = {
   img: 'https://source.unsplash.com/user/willianjusten/151x70',
   title: 'Read Dead Redemption 2',
-  price: '79.99 €',
+  price: 79.99,
 };
 
 describe('<GameItem />', () => {
@@ -20,7 +20,7 @@ describe('<GameItem />', () => {
       'src',
       props.img
     );
-    expect(screen.getByText('79.99 €')).toBeInTheDocument();
+    expect(screen.getByText('79,99 €')).toBeInTheDocument();
     expect(container.firstChild).toMatchSnapshot();
   });
 

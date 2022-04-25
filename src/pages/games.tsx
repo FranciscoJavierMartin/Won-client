@@ -30,10 +30,7 @@ export const getStaticProps: GetStaticProps<GamesProps> = async () => {
           img: cover.data?.attributes.url
             ? `http://localhost:1337${cover.data?.attributes.url}`
             : '',
-          price: new Intl.NumberFormat('en', {
-            style: 'currency',
-            currency: 'USD',
-          }).format(price),
+          price,
         })
       ),
       filterItems: filterItemsMock,

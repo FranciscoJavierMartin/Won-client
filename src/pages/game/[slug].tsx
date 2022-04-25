@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps<GameProps> = async ({ params }) => {
       cover: `http://localhost:1337${game?.cover?.data?.attributes?.src}`,
       gameInfo: {
         title: game.name,
-        price: game.price.toString(),
+        price: game.price,
         description: game.short_description,
       },
       gallery:

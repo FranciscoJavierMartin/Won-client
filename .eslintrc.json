@@ -33,6 +33,7 @@
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundry-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/ban-types": "warn"
+    "@typescript-eslint/ban-types": "warn",
+    "no-irregular-whitespace": "off"
   }
 }
