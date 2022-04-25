@@ -17,6 +17,7 @@
     "incremental": true,
     "paths": {
       "@/components/*": ["components/*"],
+      "@/common/*": ["common/*"],
       "@/graphql/*": ["graphql/*"],
       "@/templates/*": ["templates/*"],
       "@/utils/*": ["utils/*"],

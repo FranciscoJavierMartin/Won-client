@@ -11,6 +11,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src', '<rootDir>/.jest'],
   moduleNameMapper: {
+    '@/common/(.*)': '<rootDir>/src/common/$1',
     '@/components/(.*)': '<rootDir>/src/components/$1',
     '@/graphql/(.*)': '<rootDir>/src/graphql/$1',
     '@/templates/(.*)': '<rootDir>/src/templates/$1',
