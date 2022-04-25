@@ -6,7 +6,7 @@ import ExploreSidebar from '.';
 import itemsMock from './mock';
 import { Overlay } from './styles';
 
-xdescribe('<ExploreSidebar />', () => {
+describe('<ExploreSidebar />', () => {
   it('should render component', () => {
     const { container } = renderWithTheme(
       <ExploreSidebar items={itemsMock} onFilter={jest.fn} />
@@ -52,7 +52,7 @@ xdescribe('<ExploreSidebar />', () => {
     expect(screen.getByRole('radio', { name: /low to high/i })).toBeChecked();
   });
 
-  it('should filter with initial values', () => {
+  it('should filter with initial values', async () => {
     const onFilter = jest.fn();
 
     renderWithTheme(
@@ -63,19 +63,19 @@ xdescribe('<ExploreSidebar />', () => {
       />
     );
 
-    userEvent.click(screen.getByRole('button', { name: /filter/i }));
+    await userEvent.click(screen.getByRole('button', { name: /filter/i }));
     expect(onFilter).toBeCalledWith({ windows: true, sort_by: 'low-to-high' });
   });
 
-  it('should filter with checked values', () => {
+  it('should filter with checked values', async () => {
     const onFilter = jest.fn();
 
     renderWithTheme(<ExploreSidebar items={itemsMock} onFilter={onFilter} />);
 
-    userEvent.click(screen.getByLabelText(/windows/i));
-    userEvent.click(screen.getByLabelText(/linux/i));
-    userEvent.click(screen.getByLabelText(/low to high/i));
-    userEvent.click(screen.getByRole('button', { name: /filter/i }));
+    await userEvent.click(screen.getByLabelText(/windows/i));
+    await userEvent.click(screen.getByLabelText(/linux/i));
+    await userEvent.click(screen.getByLabelText(/low to high/i));
+    await userEvent.click(screen.getByRole('button', { name: /filter/i }));
 
     expect(onFilter).toBeCalledWith({
       windows: true,
@@ -84,18 +84,18 @@ xdescribe('<ExploreSidebar />', () => {
     });
   });
 
-  it('should altern between radio options', () => {
+  it('should altern between radio options', async () => {
     const onFilter = jest.fn();
 
     renderWithTheme(<ExploreSidebar items={itemsMock} onFilter={onFilter} />);
 
-    userEvent.click(screen.getByLabelText(/low to high/i));
-    userEvent.click(screen.getByLabelText(/high to low/i));
-    userEvent.click(screen.getByRole('button', { name: /filter/i }));
+    await userEvent.click(screen.getByLabelText(/low to high/i));
+    await userEvent.click(screen.getByLabelText(/high to low/i));
+    await userEvent.click(screen.getByRole('button', { name: /filter/i }));
     expect(onFilter).toBeCalledWith({ sort_by: 'high-to-low' });
   });
 
-  it('should open/close sidebar when filtering on mobile ', () => {
+  it('should open/close sidebar when filtering on mobile ', async () => {
     const { container } = renderWithTheme(
       <ExploreSidebar items={itemsMock} onFilter={jest.fn} />
     );
@@ -110,9 +110,9 @@ xdescribe('<ExploreSidebar />', () => {
     const Element = container.firstChild;
 
     expect(Element).not.toHaveStyleRule('opacity', '1', variant);
-    userEvent.click(screen.getByLabelText(/open filters/));
+    await userEvent.click(screen.getByLabelText(/open filters/));
     expect(Element).toHaveStyleRule('opacity', '1', variant);
-    userEvent.click(screen.getByLabelText(/close filters/));
+    await userEvent.click(screen.getByLabelText(/close filters/));
     expect(Element).not.toHaveStyleRule('opacity', '1', variant);
   });
 });
