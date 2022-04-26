@@ -62,3 +62,7 @@ export interface QueryHome_banners {
 export interface QueryHome {
   banners: QueryHome_banners | null;
 }
+
+export interface QueryHomeVariables {
+  limit: number;
+}

@@ -1,19 +1,41 @@
-import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home, { HomeProps } from '@/templates/Home';
-import bannersMock from '@/components/BannerSlider/mock';
 import gamesMock from '@/components/GameCardSlider/mock';
 import highlightMock from '@/components/Highlight/mock';
+import { initializeApollo } from '@/utils/apollo';
+import { QueryHome, QueryHomeVariables } from '@/graphql/generated/QueryHome';
+import { QUERY_HOME } from '@/graphql/queries/home';
 
 export default function Index(
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
+  props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   return <Home {...props} />;
 }
 
-export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const apolloClient = initializeApollo();
+  const { data } = await apolloClient.query<QueryHome, QueryHomeVariables>({
+    query: QUERY_HOME,
+    variables: { limit: 10 },
+  });
+
   return {
+    revalidate: 10,
     props: {
-      banners: bannersMock,
+      banners: data.banners!.data.map((banner) => ({
+        img: `http://localhost:1337${
+          banner.attributes!.image.data!.attributes!.url
+        }`,
+        title: banner.attributes!.title,
+        subtitle: banner.attributes!.subtitle,
+        buttonLabel: banner.attributes!.button!.label,
+        buttonLink: banner.attributes!.button!.link,
+        ...(banner.attributes?.ribbon && {
+          ribbon: banner.attributes.ribbon.text || undefined,
+          ribbonColor: banner.attributes.ribbon.color || undefined,
+          ribbonSize: banner.attributes.ribbon.size || undefined,
+        }),
+      })),
       newGames: gamesMock,
       mostPopularHighlight: highlightMock,
       mostPopularGames: gamesMock,

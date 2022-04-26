@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const HOME_QUERY = gql`
+export const QUERY_HOME = gql`
   query QueryHome {
     banners(pagination: { limit: 4 }) {
       data {
