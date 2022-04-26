@@ -14,6 +14,7 @@ import {
   GetGameBySlugVariables,
 } from '@/graphql/generated/GetGameBySlug';
 import { useRouter } from 'next/router';
+import { Platform } from '@/common/types';
 
 const apolloClient = initializeApollo();
 
@@ -55,18 +56,18 @@ export const getStaticProps: GetStaticProps<GameProps> = async ({ params }) => {
       gallery:
         game.gallery?.data.map(({ attributes }) => ({
           src: `http://localhost:1337${attributes!.url}`,
-          label: attributes?.label,
+          label: attributes!.label!,
         })) ?? [],
       description: game.description,
       details: {
-        developer: game.developers?.data[0].attributes?.name,
+        developer: game.developers!.data[0].attributes!.name,
         releaseDate: game.release_date,
-        platforms: game.platforms?.data.map(
-          ({ attributes }) => attributes?.name
+        platforms: game.platforms!.data.map(
+          ({ attributes }) => attributes!.name as Platform
         ),
-        publisher: game.publisher?.data?.attributes?.name,
+        publisher: game.publisher!.data!.attributes!.name,
         rating: game.rating,
-        genres: game.categories?.data.map(({ attributes }) => attributes?.name),
+        genres: game.categories!.data.map(({ attributes }) => attributes!.name),
       },
       upcomingGames: gamesMock,
       upcomingHighlight: highligthMock,

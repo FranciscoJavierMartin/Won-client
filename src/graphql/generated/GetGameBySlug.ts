@@ -3,7 +3,6 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { Platform } from '@/common/types';
 import { StringFilterInput, ENUM_GAME_RATING } from './globalTypes';
 
 // ====================================================
@@ -13,12 +12,12 @@ import { StringFilterInput, ENUM_GAME_RATING } from './globalTypes';
 export interface GetGameBySlug_games_data_attributes_gallery_data_attributes {
   __typename: 'UploadFile';
   url: string;
-  label: string;
+  label: string | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_gallery_data {
   __typename: 'UploadFileEntity';
-  attributes: GetGameBySlug_games_data_attributes_gallery_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_gallery_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_gallery {
@@ -33,12 +32,12 @@ export interface GetGameBySlug_games_data_attributes_cover_data_attributes {
 
 export interface GetGameBySlug_games_data_attributes_cover_data {
   __typename: 'UploadFileEntity';
-  attributes: GetGameBySlug_games_data_attributes_cover_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_cover_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_cover {
   __typename: 'UploadFileEntityResponse';
-  data: GetGameBySlug_games_data_attributes_cover_data;
+  data: GetGameBySlug_games_data_attributes_cover_data | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_developers_data_attributes {
@@ -48,7 +47,7 @@ export interface GetGameBySlug_games_data_attributes_developers_data_attributes 
 
 export interface GetGameBySlug_games_data_attributes_developers_data {
   __typename: 'DeveloperEntity';
-  attributes: GetGameBySlug_games_data_attributes_developers_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_developers_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_developers {
@@ -63,12 +62,12 @@ export interface GetGameBySlug_games_data_attributes_publisher_data_attributes {
 
 export interface GetGameBySlug_games_data_attributes_publisher_data {
   __typename: 'PublisherEntity';
-  attributes: GetGameBySlug_games_data_attributes_publisher_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_publisher_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_publisher {
   __typename: 'PublisherEntityResponse';
-  data: GetGameBySlug_games_data_attributes_publisher_data;
+  data: GetGameBySlug_games_data_attributes_publisher_data | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_categories_data_attributes {
@@ -78,7 +77,7 @@ export interface GetGameBySlug_games_data_attributes_categories_data_attributes 
 
 export interface GetGameBySlug_games_data_attributes_categories_data {
   __typename: 'CategoryEntity';
-  attributes: GetGameBySlug_games_data_attributes_categories_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_categories_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_categories {
@@ -88,12 +87,12 @@ export interface GetGameBySlug_games_data_attributes_categories {
 
 export interface GetGameBySlug_games_data_attributes_platforms_data_attributes {
   __typename: 'Platform';
-  name: Platform;
+  name: string;
 }
 
 export interface GetGameBySlug_games_data_attributes_platforms_data {
   __typename: 'PlatformEntity';
-  attributes: GetGameBySlug_games_data_attributes_platforms_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes_platforms_data_attributes | null;
 }
 
 export interface GetGameBySlug_games_data_attributes_platforms {
@@ -108,18 +107,18 @@ export interface GetGameBySlug_games_data_attributes {
   description: string;
   price: number;
   rating: ENUM_GAME_RATING;
-  release_date: any;
-  gallery: GetGameBySlug_games_data_attributes_gallery;
-  cover: GetGameBySlug_games_data_attributes_cover;
-  developers: GetGameBySlug_games_data_attributes_developers;
-  publisher: GetGameBySlug_games_data_attributes_publisher;
-  categories: GetGameBySlug_games_data_attributes_categories;
-  platforms: GetGameBySlug_games_data_attributes_platforms;
+  release_date: any | null;
+  gallery: GetGameBySlug_games_data_attributes_gallery | null;
+  cover: GetGameBySlug_games_data_attributes_cover | null;
+  developers: GetGameBySlug_games_data_attributes_developers | null;
+  publisher: GetGameBySlug_games_data_attributes_publisher | null;
+  categories: GetGameBySlug_games_data_attributes_categories | null;
+  platforms: GetGameBySlug_games_data_attributes_platforms | null;
 }
 
 export interface GetGameBySlug_games_data {
   __typename: 'GameEntity';
-  attributes: GetGameBySlug_games_data_attributes;
+  attributes: GetGameBySlug_games_data_attributes | null;
 }
 
 export interface GetGameBySlug_games {
@@ -128,9 +127,9 @@ export interface GetGameBySlug_games {
 }
 
 export interface GetGameBySlug {
-  games: GetGameBySlug_games;
+  games: GetGameBySlug_games | null;
 }
 
 export interface GetGameBySlugVariables {
-  slug?: StringFilterInput;
+  slug?: StringFilterInput | null;
 }
