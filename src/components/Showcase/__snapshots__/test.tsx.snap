@@ -612,7 +612,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
                       <div
                         class="c24"
                       >
-                        NaN €
+                        79,99 €
                       </div>
                       <button
                         class="c25"
