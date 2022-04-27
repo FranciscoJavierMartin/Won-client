@@ -14,7 +14,6 @@ export type HomeProps = {
   mostPopularGames: GameCardProps[];
   upcomingGames: GameCardProps[];
   upcomingHighligth: HighlightProps;
-  upcomingMoreGames: GameCardProps[];
   freeGames: GameCardProps[];
   freeHighligth: HighlightProps;
 };
@@ -26,7 +25,6 @@ const Home: React.FC<HomeProps> = ({
   mostPopularGames,
   upcomingGames,
   upcomingHighligth,
-  upcomingMoreGames,
   freeGames,
   freeHighligth,
 }) => (
@@ -44,10 +42,11 @@ const Home: React.FC<HomeProps> = ({
       highlight={mostPopularHighlight}
       games={mostPopularGames}
     />
-    <S.SectionUpcoming>
-      <Showcase title="Upcoming" games={upcomingGames} />
-      <Showcase highlight={upcomingHighligth} games={upcomingMoreGames} />
-    </S.SectionUpcoming>
+    <Showcase
+      title="Upcoming"
+      games={upcomingGames}
+      highlight={upcomingHighligth}
+    />
     <Showcase title="Free Games" highlight={freeHighligth} games={freeGames} />
   </Base>
 );
