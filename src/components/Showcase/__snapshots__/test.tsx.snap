@@ -334,7 +334,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
 .c12 .slick-prev,
 .c12 .slick-next {
   display: block;
-  color: #FAFAFA;
+  color: #030517;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -526,7 +526,7 @@ exports[`<Showcase /> should render full showcase 1`] = `
   </section>
   <section
     class="c11 c12"
-    color="white"
+    color="black"
   >
     <section
       class="c13"
