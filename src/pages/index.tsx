@@ -1,7 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home, { HomeProps } from '@/templates/Home';
 import { initializeApollo } from '@/utils/apollo';
-import { QueryHome } from '@/graphql/generated/QueryHome';
+import { QueryHome, QueryHomeVariables } from '@/graphql/generated/QueryHome';
 import { QUERY_HOME } from '@/graphql/queries/home';
 import { bannerMapper, gamesMapper, highlightMapper } from '@/utils/mappers';
 
@@ -13,11 +13,12 @@ export default function Index(
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const apolloClient = initializeApollo();
+  const TODAY = new Date().toISOString().slice(0, 10);
   const {
     data: { banners, newGames, upcomingGames, freeGames, sections },
-  } = await apolloClient.query<QueryHome, { limit: number }>({
+  } = await apolloClient.query<QueryHome, QueryHomeVariables>({
     query: QUERY_HOME,
-    variables: { limit: 10 },
+    variables: { date: TODAY },
   });
 
   return {
