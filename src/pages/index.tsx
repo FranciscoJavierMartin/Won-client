@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
           ribbonSize: banner.attributes.ribbon.size || undefined,
         }),
       })),
-      newGamesTitle: sections!.data!.attributes!.newGames?.title || 'News',
+      newGamesTitle: sections!.data!.attributes!.newGames!.title,
       newGames: newGames!.data.map((game) => ({
         title: game.attributes!.name,
         slug: game.attributes!.slug,
