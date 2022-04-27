@@ -9,24 +9,32 @@ import * as S from './styles';
 
 export type HomeProps = {
   banners: BannerProps[];
+  newGamesTitle: string;
   newGames: GameCardProps[];
+  mostPopularGamesTitle: string;
   mostPopularHighlight: HighlightProps;
   mostPopularGames: GameCardProps[];
-  upcomingGames: GameCardProps[];
+  upcomingGamesTitle: string;
   upcomingHighligth: HighlightProps;
-  freeGames: GameCardProps[];
+  upcomingGames: GameCardProps[];
+  freeGamesTitle: string;
   freeHighligth: HighlightProps;
+  freeGames: GameCardProps[];
 };
 
 const Home: React.FC<HomeProps> = ({
   banners,
+  newGamesTitle,
   newGames,
+  mostPopularGamesTitle,
   mostPopularHighlight,
   mostPopularGames,
-  upcomingGames,
+  upcomingGamesTitle,
   upcomingHighligth,
-  freeGames,
+  upcomingGames,
+  freeGamesTitle,
   freeHighligth,
+  freeGames,
 }) => (
   <Base>
     <Container>
@@ -35,19 +43,23 @@ const Home: React.FC<HomeProps> = ({
       </S.SectionBanner>
     </Container>
     <S.SectionNews>
-      <Showcase title="News" games={newGames} color="black" />
+      <Showcase title={newGamesTitle} games={newGames} color="black" />
     </S.SectionNews>
     <Showcase
-      title="Most popular"
+      title={mostPopularGamesTitle}
       highlight={mostPopularHighlight}
       games={mostPopularGames}
     />
     <Showcase
-      title="Upcoming"
-      games={upcomingGames}
+      title={upcomingGamesTitle}
       highlight={upcomingHighligth}
+      games={upcomingGames}
     />
-    <Showcase title="Free Games" highlight={freeHighligth} games={freeGames} />
+    <Showcase
+      title={freeGamesTitle}
+      highlight={freeHighligth}
+      games={freeGames}
+    />
   </Base>
 );
 

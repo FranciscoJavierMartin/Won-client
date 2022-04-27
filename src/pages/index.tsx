@@ -15,7 +15,7 @@ export default function Index(
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const apolloClient = initializeApollo();
   const {
-    data: { banners, newGames, upcomingGames, freeGames },
+    data: { banners, newGames, upcomingGames, freeGames, sections },
   } = await apolloClient.query<QueryHome, { limit: number }>({
     query: QUERY_HOME,
     variables: { limit: 10 },
@@ -38,6 +38,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
           ribbonSize: banner.attributes.ribbon.size || undefined,
         }),
       })),
+      newGamesTitle: sections!.data!.attributes!.newGames?.title || 'News',
       newGames: newGames!.data.map((game) => ({
         title: game.attributes!.name,
         slug: game.attributes!.slug,
@@ -47,8 +48,19 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
         }`,
         price: game.attributes!.price,
       })),
+      mostPopularGamesTitle: sections!.data!.attributes!.popularGames!.title,
       mostPopularHighlight: highlightMock,
-      mostPopularGames: gamesMock,
+      mostPopularGames:
+        sections!.data!.attributes!.popularGames!.games!.data.map((game) => ({
+          title: game.attributes!.name,
+          slug: game.attributes!.slug,
+          developer: game.attributes!.developers!.data[0].attributes!.name,
+          img: `http://localhost:1337${
+            game.attributes!.cover!.data?.attributes!.url
+          }`,
+          price: game.attributes!.price,
+        })),
+      upcomingGamesTitle: sections!.data!.attributes!.upcomingGames!.title,
       upcomingGames: upcomingGames!.data.map((game) => ({
         title: game.attributes!.name,
         slug: game.attributes!.slug,
@@ -60,6 +72,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       })),
       upcomingHighligth: highlightMock,
       upcomingMoreGames: gamesMock,
+      freeGamesTitle: sections!.data!.attributes!.freeGames!.title,
       freeGames: freeGames!.data.map((game) => ({
         title: game.attributes!.name,
         slug: game.attributes!.slug,
