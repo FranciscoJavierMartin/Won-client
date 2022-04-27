@@ -1,7 +1,5 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home, { HomeProps } from '@/templates/Home';
-import gamesMock from '@/components/GameCardSlider/mock';
-import highlightMock from '@/components/Highlight/mock';
 import { initializeApollo } from '@/utils/apollo';
 import { QueryHome } from '@/graphql/generated/QueryHome';
 import { QUERY_HOME } from '@/graphql/queries/home';
@@ -49,7 +47,24 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
         price: game.attributes!.price,
       })),
       mostPopularGamesTitle: sections!.data!.attributes!.popularGames!.title,
-      mostPopularHighlight: highlightMock,
+      mostPopularHighlight: {
+        title: sections!.data!.attributes!.popularGames!.highlight.title,
+        subtitle: sections!.data!.attributes!.popularGames!.highlight.subtitle,
+        backgroundImage: `http://localhost:1337${
+          sections!.data!.attributes!.popularGames!.highlight.background.data!
+            .attributes!.url
+        }`,
+        floatImage: `http://localhost:1337${
+          sections!.data!.attributes!.popularGames!.highlight.floatImage!.data!
+            .attributes!.url
+        }`,
+        buttonLabel:
+          sections!.data!.attributes!.popularGames!.highlight.buttonLabel,
+        buttonLink:
+          sections!.data!.attributes!.popularGames!.highlight.buttonLink,
+        alignment:
+          sections!.data!.attributes!.popularGames!.highlight.alignment!,
+      },
       mostPopularGames:
         sections!.data!.attributes!.popularGames!.games!.data.map((game) => ({
           title: game.attributes!.name,
@@ -70,8 +85,25 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
         }`,
         price: game.attributes!.price,
       })),
-      upcomingHighligth: highlightMock,
-      upcomingMoreGames: gamesMock,
+      upcomingHighligth: {
+        title: sections!.data!.attributes!.upcomingGames!.highlight!.title,
+        subtitle:
+          sections!.data!.attributes!.upcomingGames!.highlight!.subtitle,
+        backgroundImage: `http://localhost:1337${
+          sections!.data!.attributes!.upcomingGames!.highlight!.background.data!
+            .attributes!.url
+        }`,
+        floatImage: `http://localhost:1337${
+          sections!.data!.attributes!.upcomingGames!.highlight!.floatImage!
+            .data!.attributes!.url
+        }`,
+        buttonLabel:
+          sections!.data!.attributes!.upcomingGames!.highlight!.buttonLabel,
+        buttonLink:
+          sections!.data!.attributes!.upcomingGames!.highlight!.buttonLink,
+        alignment:
+          sections!.data!.attributes!.upcomingGames!.highlight!.alignment!,
+      },
       freeGamesTitle: sections!.data!.attributes!.freeGames!.title,
       freeGames: freeGames!.data.map((game) => ({
         title: game.attributes!.name,
@@ -82,7 +114,23 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
         }`,
         price: game.attributes!.price,
       })),
-      freeHighligth: highlightMock,
+      freeHighligth: {
+        title: sections!.data!.attributes!.freeGames!.highlight!.title,
+        subtitle: sections!.data!.attributes!.freeGames!.highlight!.subtitle,
+        backgroundImage: `http://localhost:1337${
+          sections!.data!.attributes!.freeGames!.highlight!.background.data!
+            .attributes!.url
+        }`,
+        floatImage: `http://localhost:1337${
+          sections!.data!.attributes!.freeGames!.highlight!.floatImage!.data!
+            .attributes!.url
+        }`,
+        buttonLabel:
+          sections!.data!.attributes!.freeGames!.highlight!.buttonLabel,
+        buttonLink:
+          sections!.data!.attributes!.freeGames!.highlight!.buttonLink,
+        alignment: sections!.data!.attributes!.freeGames!.highlight!.alignment!,
+      },
     },
   };
 };
