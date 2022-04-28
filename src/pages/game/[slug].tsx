@@ -1,8 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import Game, { GameProps } from '@/templates/Game';
-import gamesMock from '@/components/GameCardSlider/mock';
-import highligthMock from '@/components/Highlight/mock';
 import { initializeApollo } from '@/utils/apollo';
 import {
   GET_GAMES_QUERY,
@@ -17,7 +15,12 @@ import { useRouter } from 'next/router';
 import { Platform } from '@/common/types';
 import { GetRecommended } from '@/graphql/generated/GetRecommended';
 import { GET_RECOMMENDED } from '@/graphql/queries/recommended';
-import { gamesMapper } from '@/utils/mappers';
+import { gamesMapper, highlightMapper } from '@/utils/mappers';
+import {
+  GetUpcoming,
+  GetUpcomingVariables,
+} from '@/graphql/generated/GetUpcoming';
+import { GET_UPCOMING } from '@/graphql/queries/upcoming';
 
 const apolloClient = initializeApollo();
 
@@ -52,6 +55,17 @@ export const getStaticProps: GetStaticProps<GameProps> = async ({ params }) => {
     query: GET_RECOMMENDED,
   });
 
+  const TODAY = new Date().toISOString().slice(0, 10);
+  const { data: upcoming } = await apolloClient.query<
+    GetUpcoming,
+    GetUpcomingVariables
+  >({
+    query: GET_UPCOMING,
+    variables: {
+      date: TODAY,
+    },
+  });
+
   return {
     revalidate: 60,
     props: {
@@ -77,8 +91,11 @@ export const getStaticProps: GetStaticProps<GameProps> = async ({ params }) => {
         rating: game.rating,
         genres: game.categories!.data.map(({ attributes }) => attributes!.name),
       },
-      upcomingGames: gamesMock,
-      upcomingHighlight: highligthMock,
+      upcomingTitle: upcoming.showcase?.data?.attributes?.upcomingGames?.title,
+      upcomingGames: gamesMapper(upcoming.upcomingGames!.data!),
+      upcomingHighlight: highlightMapper(
+        upcoming.showcase!.data!.attributes!.upcomingGames!.highlight!
+      ),
       recommendedTitle:
         recommended.recommended!.data!.attributes!.section.title,
       recommendedGames: gamesMapper(

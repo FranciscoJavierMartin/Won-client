@@ -15,6 +15,7 @@ export type GameProps = {
   gallery?: GalleryImageProps[];
   description: string;
   details: GameDetailsProps;
+  upcomingTitle?: string;
   upcomingGames: GameCardProps[];
   upcomingHighlight: HighlightProps;
   recommendedTitle: string;
@@ -27,6 +28,7 @@ const Game: React.FC<GameProps> = ({
   gallery,
   description,
   details,
+  upcomingTitle,
   upcomingGames,
   upcomingHighlight,
   recommendedTitle,
@@ -49,7 +51,7 @@ const Game: React.FC<GameProps> = ({
         <Divider />
       </S.SectionGameDetails>
       <Showcase
-        title="Upcoming"
+        title={upcomingTitle}
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
