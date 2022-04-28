@@ -10,12 +10,14 @@ import Base from '@/templates/Base';
 
 export type WishlistProps = {
   games?: GameCardProps[];
+  recommendedTitle?: string;
   recommendedGames: GameCardProps[];
   recommendedHighlight: HighlightProps;
 };
 
 const Wishlist: React.FC<WishlistProps> = ({
   games,
+  recommendedTitle,
   recommendedGames,
   recommendedHighlight,
 }) => (
@@ -40,7 +42,7 @@ const Wishlist: React.FC<WishlistProps> = ({
       <Divider />
     </Container>
     <Showcase
-      title="you may like these games"
+      title={recommendedTitle}
       games={recommendedGames}
       highlight={recommendedHighlight}
     />
