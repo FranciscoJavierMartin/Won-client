@@ -17,6 +17,7 @@ export type GameProps = {
   details: GameDetailsProps;
   upcomingGames: GameCardProps[];
   upcomingHighlight: HighlightProps;
+  recommendedTitle: string;
   recommendedGames: GameCardProps[];
 };
 
@@ -28,6 +29,7 @@ const Game: React.FC<GameProps> = ({
   details,
   upcomingGames,
   upcomingHighlight,
+  recommendedTitle,
   recommendedGames,
 }) => (
   <Base>
@@ -51,7 +53,7 @@ const Game: React.FC<GameProps> = ({
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
-      <Showcase title="You may like these games" games={recommendedGames} />
+      <Showcase title={recommendedTitle} games={recommendedGames} />
     </S.Main>
   </Base>
 );

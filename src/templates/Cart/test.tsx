@@ -8,6 +8,7 @@ import cardsMock from '@/components/PaymentOptions/mock';
 import React from 'react';
 
 const props = {
+  recommendedTitle: 'You may like these games',
   recommendedGames: gamesMock,
   recommendedHighlight: highligthMock,
   items: itemsMock,
