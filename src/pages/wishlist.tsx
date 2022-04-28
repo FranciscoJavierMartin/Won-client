@@ -17,6 +17,7 @@ export const getStaticProps: GetStaticProps<WishlistProps> = async () => {
   const { data } = await apolloClient.query<GetRecommended>({
     query: GET_RECOMMENDED,
   });
+
   return {
     props: {
       games: gamesMock,
